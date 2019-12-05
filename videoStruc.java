@@ -41,7 +41,7 @@ public class videoStruc {
 		else
 			soundFileName= "query/" + videoname + "/" + videoname  + ".wav";
 		try {
-			System.out.println("YOOOOOOO: " + soundFileName);
+			System.out.println("Extracting wav file: " + soundFileName);
 			File soundFile = new File(soundFileName);
 			InputStream sis = new FileInputStream(soundFile);
 			

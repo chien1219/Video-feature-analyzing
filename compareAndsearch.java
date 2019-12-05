@@ -189,6 +189,17 @@ public class compareAndsearch {
 		vs[4].videoname = "sports";
 		vs[5].videoname = "starcraft";
 		vs[6].videoname = "traffic";
+
+		File cachedFile = new File("video6.txt");
+		// Use Cached txt file
+		if(cachedFile.exists())
+			ReadCached();
+		// Read and Extract
+		else
+			ExtractVideoAudio();
+	}
+
+	private void ReadCached() throws IOException{
 		for(int i = 0; i < 7;i++) {
 			BufferedReader in = new BufferedReader(new FileReader("video" + i + ".txt")); 
 			String line = in.readLine(); 
@@ -213,14 +224,14 @@ public class compareAndsearch {
 					}
 					t++;
 					vs[i].rgbCount[j][k] = Double.parseDouble(dvalue);
-					//System.out.print(vs[i].rgbCount[j][k] + " ");
 				}
-				//System.out.println("");
 			}
-			
 			in.close();
 		}
-		/*for(int i = 0;i < 7;i++) {
+	}
+
+	private void ExtractVideoAudio() throws IOException{
+		for(int i = 0;i < 7;i++) {
 			try {
 				vs[i].readAndextractSound();
 			}catch(PlayWaveException e) {
@@ -253,9 +264,7 @@ public class compareAndsearch {
 				bw.newLine();
 			}
 			bw.close();
-		}*/
-		
-		
+		}
 	}
 	
 	private double hashCompare(int[] q, int [] db) {

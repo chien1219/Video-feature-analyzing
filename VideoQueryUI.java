@@ -19,16 +19,20 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class VideoQueryUI extends Frame implements ActionListener {
-    private ArrayList<BufferedImage> images; 
+	private static final int WIDTH = 352;
+	private static final int HEIGHT = 288;
+	private static final int FRAME_RATE = 30;
+	private static final int DB_VIDEOS = 7;
+	
+	private ArrayList<BufferedImage> images; 
     private ArrayList<BufferedImage> dbImages;
     private PlaySound playSound;
     private PlaySound playDBSound;
-    static final int frameRate = 30;
     private JLabel imageLabel;
     private JLabel resultImageLabel;
     
-    private JLabel errorLabel;
-    private String errorsg;
+    private JLabel resultLabel;
+    private String resultmsg;
     private TextField queryField;
     private Button playButton;
     private Button pauseButton;
@@ -52,13 +56,11 @@ public class VideoQueryUI extends Frame implements ActionListener {
     private Thread audioThread;
     private Thread audioDBThread;
     private int currentFrameNum = 0;
-    private int currentDBFrameNum = 0;
-    private int totalFrameNum = 150;
-    private int totalDBFrameNum = 600;
+	private int currentDBFrameNum = 0;
+	private int totalQueryFrames = 150;
+    private int totalDBFrames = 600;
     private String fileFolder = "query";
     private String dbFileFolder = "db";
-    static final int WIDTH = 352;
-    static final int HEIGHT = 288;
     private compareAndsearch searchClass;
     private Map<String, Integer> similarFrameMap;
     
@@ -68,22 +70,24 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		
 	    //Query Panel
 	    Panel queryPanel = new Panel();
-	    queryField = new TextField(13);
-	    JLabel queryLabel = new JLabel("Query: ");
-	    queryPanel.add(queryLabel);
+		queryField = new TextField("Query Video", 35);
+	    //JLabel queryLabel = new JLabel("Query: ");
+	    //queryPanel.add(queryLabel);
 	    queryPanel.add(queryField);
-	    loadQueryButton = new Button("Load Query Video");
-	    loadQueryButton.addActionListener(this);
-	    errorLabel = new JLabel("");
-	    errorLabel.setForeground(Color.RED);
+	    queryField.addActionListener(this);
+		//loadQueryButton = new Button("Load Query Video");
+		//loadQueryButton.addActionListener(this);
+		//queryPanel.add(loadQueryButton);
+	    resultLabel = new JLabel("");
+		resultLabel.setForeground(Color.RED);
+		//queryPanel.add(resultLabel);
 	    
 	    searchButton = new Button("Search");
-	    searchButton.setFont(new Font("monspaced", Font.BOLD, 60));
+	    searchButton.setFont(new Font("monspaced", Font.BOLD, 45));
 	    searchButton.addActionListener(this);
-	    queryPanel.add(loadQueryButton);
-//	    queryPanel.add(errorLabel);
 	    Panel searchPanel = new Panel();
-	    searchPanel.add(searchButton);
+		searchPanel.add(searchButton);
+		
 	    Panel controlQueryPanel = new Panel();
 	    controlQueryPanel.setLayout(new GridLayout(2, 0));
 	    controlQueryPanel.add(queryPanel);
@@ -92,15 +96,18 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    
 	    //Result Panel
 	    Panel resultPanel = new Panel();
-	    resultListDisplay = new List(7);
-	    resultListDisplay.add("Matched Videos:    ");
-	    resultList = new ArrayList<Double>(7);
-	    resultListRankedNames = new ArrayList<String>(7);
+		resultListDisplay = new List(DB_VIDEOS);
+		resultListDisplay.setMinimumSize(new Dimension(100,100));
+		resultListDisplay.add("Matched Videos:");
+		resultListDisplay.addActionListener(this);
 
-	    resultPanel.add(resultListDisplay, BorderLayout.SOUTH);
-	    loadResultButton = new Button("Load Selected Video");
-	    loadResultButton.addActionListener(this);
-	    resultPanel.add(loadResultButton);
+	    resultList = new ArrayList<Double>(DB_VIDEOS);
+	    resultListRankedNames = new ArrayList<String>(DB_VIDEOS);
+		resultPanel.add(resultListDisplay, BorderLayout.SOUTH);
+		
+	    //loadResultButton = new Button("Load Selected Video");
+	    //loadResultButton.addActionListener(this);
+	    //resultPanel.add(loadResultButton);
 	    add(resultPanel, BorderLayout.EAST);
 	    
 	    //Video List Panel
@@ -139,7 +146,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    resultStopButton.addActionListener(this);
 	    controlPanel.add(stopButton);
 	    resultControlPanel.add(resultStopButton);
-	    resultControlPanel.add(errorLabel);
+	    resultControlPanel.add(resultLabel);
 	    
 	    listPanel.add(controlPanel);
 	    listPanel.add(resultControlPanel);
@@ -150,6 +157,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			searchClass.init();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
+			System.out.println("Compare and Search Error - " + e.getMessage());
 			e.printStackTrace();
 		}
 	}
@@ -167,10 +175,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		playingThread = new Thread() {
             public void run() {
 	            System.out.println("Start playing video: " + fileName);
-	          	for (int i = currentFrameNum; i < totalFrameNum; i++) {
+	          	for (int i = currentFrameNum; i < totalQueryFrames; i++) {
 	          	  	imageLabel.setIcon(new ImageIcon(images.get(i)));
 	          	    try {
-	                  	sleep(1000/frameRate);
+	                  	sleep(1000/FRAME_RATE);
 	          	    } catch (InterruptedException e) {
 	          	    	if(playStatus == 3) {
 	          	    		currentFrameNum = 0;
@@ -195,7 +203,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
         	        playSound.play();
         	    } catch (PlayWaveException e) {
         	        e.printStackTrace();
-        	        errorLabel.setText(e.getMessage());
+        	        resultLabel.setText(e.getMessage());
         	        return;
         	    }
 	        }
@@ -204,14 +212,14 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    playingThread.start();
 	}
 	
-	private void playDBVideo() {
+	private void playDB_VIDEO() {
 		playingDBThread = new Thread() {
             public void run() {
 	            System.out.println("Start playing result video: " + fileName);
-	          	for (int i = currentDBFrameNum; i < totalDBFrameNum; i++) {
+	          	for (int i = currentDBFrameNum; i < totalDBFrames; i++) {
 	          	  	resultImageLabel.setIcon(new ImageIcon(dbImages.get(i)));
 	          	    try {
-	                  	sleep(1000/frameRate);
+	                  	sleep(1000/FRAME_RATE);
 	          	    } catch (InterruptedException e) {
 	          	    	if(resultPlayStatus == 3) {
 	          	    		currentDBFrameNum = 0;
@@ -236,7 +244,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
         	        playDBSound.play();
         	    } catch (PlayWaveException e) {
         	        e.printStackTrace();
-        	        errorLabel.setText(e.getMessage());
+        	        resultLabel.setText(e.getMessage());
         	        return;
         	    }
 	        }
@@ -255,7 +263,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		}
 	}
 	
-	private void pauseDBVideo() throws InterruptedException {
+	private void pauseDB_VIDEO() throws InterruptedException {
 		if(playingDBThread != null){
 			playingDBThread.interrupt();
 			audioDBThread.interrupt();
@@ -278,7 +286,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		}
 	}
 	
-	private void stopDBVideo() {
+	private void stopDB_VIDEO() {
 		if(playingDBThread != null) {
 			playingDBThread.interrupt();
 			audioDBThread.interrupt();
@@ -313,10 +321,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		int userSelect = resultListDisplay.getSelectedIndex() - 1;
 		String userSelectStr = resultListRankedNames.get(userSelect);
 		Integer frm = similarFrameMap.get(userSelectStr);
-		errorsg = "The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".";
+		resultmsg = "The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".";
 	    Thread initThread = new Thread() {
             public void run() {
-            	errorLabel.setText(errorsg);  	   
+            	resultLabel.setText(resultmsg);  	   
 	        }
 	    };
 	    initThread.start();
@@ -330,7 +338,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	      }
 	      //every query video in has 150 frames
 	      images = new ArrayList<BufferedImage>();
-	      for(int i=1; i<=150; i++) {
+	      for(int i = 1; i <= totalQueryFrames; i++) {
 	    	  String fileNum = "00";
 	    	  if(i < 100 && i > 9) {
 	    		  fileNum = "0";
@@ -370,36 +378,36 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	      }//end for
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
-	      errorLabel.setText(e.getMessage());
+	      resultLabel.setText(e.getMessage());
 	    } catch (IOException e) {
 	      e.printStackTrace();
-	      errorLabel.setText(e.getMessage());
+	      resultLabel.setText(e.getMessage());
 	    }
 	    this.playStatus = 3;
 	    currentFrameNum = 0;
-	    totalFrameNum = images.size();
+	    totalQueryFrames = images.size();
 	    displayScreenShot();
 	    System.out.println("End loading query video contents.");
 	}
 	
 	
-	private void loadDBVideo(String dbVideoName) {
+	private void loadDB_VIDEO(String DB_VIDEOName) {
 		System.out.println("Start loading db video contents.");
 	    try {
-	      if(dbVideoName == null || dbVideoName.isEmpty()){
+	      if(DB_VIDEOName == null || DB_VIDEOName.isEmpty()){
 	    	  return;
 	      }
 	      //every query video in has 600 frames
 	      dbImages = new ArrayList<BufferedImage>();
-	      for(int i=1; i<=600; i++) {
+	      for(int i = 1; i <= totalDBFrames; i++) {
 	    	  String fileNum = "00";
 	    	  if(i < 100 && i > 9) {
 	    		  fileNum = "0";
 	    	  } else if(i > 99) {
 	    		  fileNum = "";
 	    	  }
-	    	  String fullName = dbFileFolder + "/" + dbVideoName + "/" + dbVideoName + fileNum + new Integer(i).toString() + ".rgb";
-	    	  String audioFilename = dbFileFolder + "/" + dbVideoName + "/" + dbVideoName + ".wav";
+	    	  String fullName = dbFileFolder + "/" + DB_VIDEOName + "/" + DB_VIDEOName + fileNum + new Integer(i).toString() + ".rgb";
+	    	  String audioFilename = dbFileFolder + "/" + DB_VIDEOName + "/" + DB_VIDEOName + ".wav";
 	    	  
 	    	  File file = new File(fullName);
 	    	  InputStream is = new FileInputStream(file);
@@ -431,14 +439,14 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	      }//end for
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
-	      errorLabel.setText(e.getMessage());
+	      resultLabel.setText(e.getMessage());
 	    } catch (IOException e) {
 	      e.printStackTrace();
-	      errorLabel.setText(e.getMessage());
+	      resultLabel.setText(e.getMessage());
 	    }
 	    this.resultPlayStatus = 3;
 	    currentDBFrameNum = 0;
-	    totalDBFrameNum = dbImages.size();
+	    totalDBFrames = dbImages.size();
 	    displayDBScreenShot();
 	    System.out.println("End loading db video contents.");
 	}
@@ -455,17 +463,17 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			System.out.println("result play button clicked");
 			if(this.resultPlayStatus > 1) {
 				this.resultPlayStatus = 1;
-				this.playDBVideo();
+				this.playDB_VIDEO();
 			}
 		} else if(e.getSource() == this.resultPauseButton) {
 			System.out.println("result pause button clicked");
 			if(this.resultPlayStatus == 1) {
 				this.resultPlayStatus = 2;
 				try {
-					this.pauseDBVideo();
+					this.pauseDB_VIDEO();
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
-					errorLabel.setText(e1.getMessage());
+					resultLabel.setText(e1.getMessage());
 					e1.printStackTrace();
 				}
 			}
@@ -478,7 +486,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 				} catch (InterruptedException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
-					errorLabel.setText(e1.getMessage());
+					resultLabel.setText(e1.getMessage());
 				}
 			}
 		} else if(e.getSource() == this.stopButton) {
@@ -491,10 +499,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			System.out.println("result stop button clicked");
 			if(this.resultPlayStatus < 3) {
 				this.resultPlayStatus = 3;
-				this.stopDBVideo();
+				this.stopDB_VIDEO();
 			}
 		}
-		else if(e.getSource() == this.loadQueryButton) {
+		else if(e.getSource() == this.queryField) {
 			String userInput = queryField.getText();
 			if(userInput != null && !userInput.isEmpty()) {
 				this.playingThread = null;
@@ -509,8 +517,8 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			resultMap = searchClass.search(userInput.trim());
 			resultListDisplay.removeAll();
 		    resultListDisplay.add("Matched Videos:    ");
-		    resultList = new ArrayList<Double>(7);
-		    resultListRankedNames = new ArrayList<String>(7);
+		    resultList = new ArrayList<Double>(DB_VIDEOS);
+		    resultListRankedNames = new ArrayList<String>(DB_VIDEOS);
 			sortedResultMap = new HashMap<String, Double>();
 		    
 		    Iterator it = resultMap.entrySet().iterator();
@@ -537,12 +545,12 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			    }
 		    }
 		    similarFrameMap = searchClass.framemap;
-		} else if(e.getSource() == this.loadResultButton) {
+		} else if(e.getSource() == this.resultListDisplay) {
 			int userSelect = resultListDisplay.getSelectedIndex() - 1;
 			if(userSelect > -1) {
 				this.playingDBThread = null;
 				this.audioDBThread = null;
-				this.loadDBVideo(resultListRankedNames.get(userSelect));
+				this.loadDB_VIDEO(resultListRankedNames.get(userSelect));
 				this.updateSimilarFrame();
 			}
 		}
