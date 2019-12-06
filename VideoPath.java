@@ -6,11 +6,11 @@ public final class VideoPath{
     public static String dbPath;
   
     public static String getQueryPath(){
-        return VideoPath.queryPath == null ? "fuck" : VideoPath.queryPath;
+        return VideoPath.queryPath == null ? "query" : VideoPath.queryPath;
     }
   
     public static String getDBPath(){
-        return VideoPath.dbPath == null ? "fuckdb" : VideoPath.dbPath;
+        return VideoPath.dbPath == null ? "db" : VideoPath.dbPath;
     }
   
     public static void setQueryPath(String p){

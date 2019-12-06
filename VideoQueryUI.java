@@ -19,6 +19,8 @@ import javax.swing.ImageIcon;
 import javax.swing.JLabel;
 
 public class VideoQueryUI extends Frame implements ActionListener {
+
+	private static final long serialVersionUID = 1L;
 	private static final int WIDTH = 352;
 	private static final int HEIGHT = 288;
 	private static final int FRAME_RATE = 30;
@@ -331,6 +333,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	}
 	
 	private void loadVideo(String userInput) {
+		totalQueryFrames = 150;
 		System.out.println("Start loading query video contents.");
 	    try {
 	      if(userInput == null || userInput.isEmpty()){
@@ -348,13 +351,12 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    		  fileNum = "0";
 	    	  } else if(i > 99) {
 	    		  fileNum = "";
-	    	  }
+			  }
 	    	  fullName = VideoPath.getQueryPath() + "/" + userInput + "/" + userInput + (underline ? "" : "_") + fileNum + new Integer(i).toString() + ".rgb";
 	    	  String audioFilename = VideoPath.getQueryPath() + "/" + userInput + "/" + userInput + ".wav";
 			  file = new File(fullName);
 			  
 	    	  InputStream is = new FileInputStream(file);
-
 	   	      long len = file.length();
 		      byte[] bytes = new byte[(int)len];
 		      int offset = 0;
@@ -378,10 +380,11 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	          images.add(image);
 	          is.close();
 	          playSound = new PlaySound(audioFilename);
-	          System.out.println("End loading query frame: " + fullName);
+			  System.out.println("End loading query frame: " + fullName);
+			  SetResultMsg("Load Video Success");
 	      }//end for
 	    } catch (FileNotFoundException e) {
-	      e.printStackTrace();
+		  e.printStackTrace();
 	      SetResultMsg(e.getMessage());
 	    } catch (IOException e) {
 	      e.printStackTrace();
