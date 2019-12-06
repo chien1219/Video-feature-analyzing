@@ -44,7 +44,7 @@ public class compareAndsearch {
 		}
 		
 		//compare the most similar videos
-		for(int i =0;i < 7;i++) {
+		for(int i = 0; i < 7; i++) {
 			//array for recording the start frame of the similar clips
 			int[] resembleClips = new int[250];
 			double[] resembleValues = new double[250];

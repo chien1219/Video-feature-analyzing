@@ -48,7 +48,6 @@ public class VideoQueryUI extends Frame implements ActionListener {
     private Map<String, Double> sortedResultMap;
     private ArrayList<Double> resultList;
     private ArrayList<String> resultListRankedNames;
-    private String fileName;
     private int playStatus = 3;//1 for play, 2 for pause, 3 for stop
     private int resultPlayStatus = 3;
     private Thread playingThread;
@@ -59,8 +58,6 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	private int currentDBFrameNum = 0;
 	private int totalQueryFrames = 150;
     private int totalDBFrames = 600;
-    private String fileFolder = "query";
-    private String dbFileFolder = "db";
     private compareAndsearch searchClass;
     private Map<String, Integer> similarFrameMap;
     
@@ -156,10 +153,18 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    try {
 			searchClass.init();
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("Compare and Search Error - " + e.getMessage());
 			e.printStackTrace();
 		}
+	}
+
+	public void SetResultMsg(String msg){
+		Thread initThread = new Thread() {
+            public void run() {
+            	resultLabel.setText(msg);  	   
+	        }
+		};
+		initThread.start();
 	}
 	
 	public void setImages(ArrayList<BufferedImage> images){
@@ -174,7 +179,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	private void playVideo() {
 		playingThread = new Thread() {
             public void run() {
-	            System.out.println("Start playing video: " + fileName);
+	            System.out.println("Start playing video");
 	          	for (int i = currentFrameNum; i < totalQueryFrames; i++) {
 	          	  	imageLabel.setIcon(new ImageIcon(images.get(i)));
 	          	    try {
@@ -194,7 +199,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	          		playStatus = 3;
 		            currentFrameNum = 0;
 	          	}
-	            System.out.println("End playing video: " + fileName);
+	            System.out.println("End playing video");
 	        }
 	    };
 	    audioThread = new Thread() {
@@ -203,7 +208,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
         	        playSound.play();
         	    } catch (PlayWaveException e) {
         	        e.printStackTrace();
-        	        resultLabel.setText(e.getMessage());
+					SetResultMsg(e.getMessage());
         	        return;
         	    }
 	        }
@@ -215,7 +220,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	private void playDB_VIDEO() {
 		playingDBThread = new Thread() {
             public void run() {
-	            System.out.println("Start playing result video: " + fileName);
+	            System.out.println("Start playing result video");
 	          	for (int i = currentDBFrameNum; i < totalDBFrames; i++) {
 	          	  	resultImageLabel.setIcon(new ImageIcon(dbImages.get(i)));
 	          	    try {
@@ -235,7 +240,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	          		resultPlayStatus = 3;
 			        currentDBFrameNum = 0;
 	          	}
-	          	System.out.println("End playing result video: " + fileName);
+	          	System.out.println("End playing result video");
 	        }
 	    };
 	    audioDBThread = new Thread() {
@@ -244,7 +249,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
         	        playDBSound.play();
         	    } catch (PlayWaveException e) {
         	        e.printStackTrace();
-        	        resultLabel.setText(e.getMessage());
+        	        SetResultMsg(e.getMessage());
         	        return;
         	    }
 	        }
@@ -322,12 +327,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 		String userSelectStr = resultListRankedNames.get(userSelect);
 		Integer frm = similarFrameMap.get(userSelectStr);
 		resultmsg = "The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".";
-	    Thread initThread = new Thread() {
-            public void run() {
-            	resultLabel.setText(resultmsg);  	   
-	        }
-	    };
-	    initThread.start();
+	    SetResultMsg(resultmsg);
 	}
 	
 	private void loadVideo(String userInput) {
@@ -335,7 +335,11 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    try {
 	      if(userInput == null || userInput.isEmpty()){
 	    	  return;
-	      }
+		  }
+		  //check filename first
+		  String fullName = VideoPath.getQueryPath() + "/" + userInput + "/" + userInput + "001" + ".rgb";
+		  File file = new File(fullName);
+		  Boolean underline = file.exists() ? true : false; 
 	      //every query video in has 150 frames
 	      images = new ArrayList<BufferedImage>();
 	      for(int i = 1; i <= totalQueryFrames; i++) {
@@ -345,10 +349,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    	  } else if(i > 99) {
 	    		  fileNum = "";
 	    	  }
-	    	  String fullName = fileFolder + "/" + userInput + "/" + userInput +fileNum + new Integer(i).toString() + ".rgb";
-	    	  String audioFilename = fileFolder + "/" + userInput + "/" + userInput + ".wav";
-	    	  
-	    	  File file = new File(fullName);
+	    	  fullName = VideoPath.getQueryPath() + "/" + userInput + "/" + userInput + (underline ? "" : "_") + fileNum + new Integer(i).toString() + ".rgb";
+	    	  String audioFilename = VideoPath.getQueryPath() + "/" + userInput + "/" + userInput + ".wav";
+			  file = new File(fullName);
+			  
 	    	  InputStream is = new FileInputStream(file);
 
 	   	      long len = file.length();
@@ -378,10 +382,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	      }//end for
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
-	      resultLabel.setText(e.getMessage());
+	      SetResultMsg(e.getMessage());
 	    } catch (IOException e) {
 	      e.printStackTrace();
-	      resultLabel.setText(e.getMessage());
+	      SetResultMsg(e.getMessage());
 	    }
 	    this.playStatus = 3;
 	    currentFrameNum = 0;
@@ -406,8 +410,8 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	    	  } else if(i > 99) {
 	    		  fileNum = "";
 	    	  }
-	    	  String fullName = dbFileFolder + "/" + DB_VIDEOName + "/" + DB_VIDEOName + fileNum + new Integer(i).toString() + ".rgb";
-	    	  String audioFilename = dbFileFolder + "/" + DB_VIDEOName + "/" + DB_VIDEOName + ".wav";
+	    	  String fullName = VideoPath.getDBPath() + "/" + DB_VIDEOName + "/" + DB_VIDEOName + fileNum + new Integer(i).toString() + ".rgb";
+	    	  String audioFilename = VideoPath.getDBPath() + "/" + DB_VIDEOName + "/" + DB_VIDEOName + ".wav";
 	    	  
 	    	  File file = new File(fullName);
 	    	  InputStream is = new FileInputStream(file);
@@ -439,10 +443,10 @@ public class VideoQueryUI extends Frame implements ActionListener {
 	      }//end for
 	    } catch (FileNotFoundException e) {
 	      e.printStackTrace();
-	      resultLabel.setText(e.getMessage());
+	      SetResultMsg(e.getMessage());
 	    } catch (IOException e) {
 	      e.printStackTrace();
-	      resultLabel.setText(e.getMessage());
+	      SetResultMsg(e.getMessage());
 	    }
 	    this.resultPlayStatus = 3;
 	    currentDBFrameNum = 0;
@@ -472,8 +476,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 				try {
 					this.pauseDB_VIDEO();
 				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					resultLabel.setText(e1.getMessage());
+	      			SetResultMsg(e1.getMessage());
 					e1.printStackTrace();
 				}
 			}
@@ -484,9 +487,8 @@ public class VideoQueryUI extends Frame implements ActionListener {
 				try {
 					this.pauseVideo();
 				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
 					e1.printStackTrace();
-					resultLabel.setText(e1.getMessage());
+					SetResultMsg(e1.getMessage());
 				}
 			}
 		} else if(e.getSource() == this.stopButton) {
@@ -503,6 +505,7 @@ public class VideoQueryUI extends Frame implements ActionListener {
 			}
 		}
 		else if(e.getSource() == this.queryField) {
+			System.out.println("query field clicked");
 			String userInput = queryField.getText();
 			if(userInput != null && !userInput.isEmpty()) {
 				this.playingThread = null;

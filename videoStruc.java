@@ -37,9 +37,9 @@ public class videoStruc {
 	public void readAndextractSound() throws PlayWaveException, FileNotFoundException, IOException{
 		String soundFileName;
 		if(type == 0)
-			soundFileName= "db/" + videoname + "/" + videoname + ".wav";
+			soundFileName= VideoPath.getDBPath() + "/" + videoname + "/" + videoname + ".wav";
 		else
-			soundFileName= "query/" + videoname + "/" + videoname  + ".wav";
+			soundFileName= VideoPath.getQueryPath() + "/" + videoname + "/" + videoname  + ".wav";
 		try {
 			System.out.println("Extracting wav file: " + soundFileName);
 			File soundFile = new File(soundFileName);
@@ -71,20 +71,17 @@ public class videoStruc {
 						/*System.out.println(count++);*/
 					}
 			    }
-			}catch (IOException e){ e.printStackTrace();}
-			
-			
-			
+			}
+			catch (IOException e){
+				e.printStackTrace();
+			}	
 		}catch (FileNotFoundException e) {
-		      e.printStackTrace();
-		} catch (IOException e) {
 		      e.printStackTrace();
 		}
 	}
 	
 	public void readAndextractVideo() {
 		for(int i = 0;i < framenum;i++) {
-			//System.out.println("line" + i);
 			int[] bits = new int[99];
 			String num  = "";
 			int k = i + 1;
@@ -95,10 +92,19 @@ public class videoStruc {
 			num += Integer.toString(k);
 			String imgpath;
 			if(type == 0)
-				imgpath= "db/" + videoname + "/" + videoname + num + ".rgb";
+				imgpath= VideoPath.getDBPath() + "/" + videoname + "/" + videoname + num + ".rgb";
 			else
-				imgpath= "query/" + videoname + "/" + videoname + num + ".rgb";
-			readImagergb(imgpath, i);
+				imgpath= VideoPath.getQueryPath() + "/" + videoname + "/" + videoname + num + ".rgb";
+			File file = new File(imgpath);
+			if (!file.exists())
+			{
+				if(type == 0)
+				imgpath= VideoPath.getDBPath() + "/" + videoname + "/" + videoname + "_" + num + ".rgb";
+				else
+				imgpath= VideoPath.getQueryPath() + "/" + videoname + "/" + videoname + "_" + num + ".rgb";
+			}
+			file = new File(imgpath);
+			readImagergb(file, i);
 			bits = cvtComputeBits(cvtGrayscale(resizePixels(colorbytes[i])));
 			for(int j = 0;j < 99;j++) {
 				imgbytes[i][j] = bits[j];
@@ -156,32 +162,26 @@ public class videoStruc {
 		}
 	}
 	
-	private void readImagergb(String imgpath, int i){
+	private void readImagergb(File file, int i){
 		//create a new buffered image
 		
-		
-		File file = new File(imgpath);
 		long len = file.length();
 	    colorbytes[i] = new byte[(int)len];
 		//read image from file path
 		try {
-			
 		    InputStream is = new FileInputStream(file);
 		    
 		    int offset = 0;
 	        int numRead = 0;
 	        while (offset < colorbytes.length && (numRead=is.read(colorbytes[i], offset, colorbytes[i].length-offset)) >= 0) {
 	            offset += numRead;
-	        }
-	        
-	        
+			}       
+			is.close();
 		}catch (FileNotFoundException e) {
-		      e.printStackTrace();
+			  e.printStackTrace();
 		} catch (IOException e) {
 		      e.printStackTrace();
 		}
-		
-		
 	}
 	
 	private byte[] resizePixels(byte[] pixels) {
