@@ -10,7 +10,6 @@ public class ColorResults implements Serializable
 {
     public Map<String, Integer> frameMap;
     public Map<String, Double> resultMap;
-    ArrayList<FrameData> frames;
     //public OpenCVColorResults()    {     frames = new ArrayList<>();      }
-    public ColorResults()    {frames = new ArrayList<>(); }
+    public ColorResults()    { }
 }

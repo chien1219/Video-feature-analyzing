@@ -1,7 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ad2aa871-b69d-45ad-a9ec-1c4ae0c43271" name="Default" comment="" />
+    <list default="true" id="ad2aa871-b69d-45ad-a9ec-1c4ae0c43271" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/VideoQuerying.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/flowers/flowers.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/flowers/flowers.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/interview/interview.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/interview/interview.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/movie/movie.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/movie/movie.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/musicvideo/musicvideo.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/musicvideo/musicvideo.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/sports/sports.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/sports/sports.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/starcraft/starcraft.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/starcraft/starcraft.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_videos/traffic/traffic.meta" beforeDir="false" afterPath="$PROJECT_DIR$/database_videos/traffic/traffic.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/query_videos/Q3/Q3.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/query_videos/Q3/Q3.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/ColorResults.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/ColorResults.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/FXMLController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/FXMLController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/QueryProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/mycompany/videoquerying/QueryProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/INDEX.LIST" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/styles/Styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/styles/Styles.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -20,6 +41,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsGulpfileManager">
@@ -34,6 +58,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1Uig84GchIg0W8kPZA1mGr2Wy4A" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -41,6 +66,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="FullScreen" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="js-jscs-nodeInterpreter" value="/usr/local/bin/node" />
@@ -468,30 +494,30 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575938992019">
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1575972963826">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1575938992019" />
+    <state x="104" y="62" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.800@0.0.1280.800" timestamp="1575972963826" />
     <state x="394" y="172" key="EnvironmentVariablesDialog" timestamp="1575938989659">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
     <state x="394" y="172" key="EnvironmentVariablesDialog/0.0.1280.800@0.0.1280.800" timestamp="1575938989659" />
-    <state width="1238" height="155" key="GridCell.Tab.0.bottom" timestamp="1575970848685">
+    <state width="1238" height="155" key="GridCell.Tab.0.bottom" timestamp="1575976289619">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575970848685" />
-    <state width="1238" height="155" key="GridCell.Tab.0.center" timestamp="1575970848684">
+    <state width="1238" height="155" key="GridCell.Tab.0.bottom/0.0.1280.800@0.0.1280.800" timestamp="1575976289619" />
+    <state width="1238" height="155" key="GridCell.Tab.0.center" timestamp="1575976289617">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575970848684" />
-    <state width="1238" height="155" key="GridCell.Tab.0.left" timestamp="1575970848683">
+    <state width="1238" height="155" key="GridCell.Tab.0.center/0.0.1280.800@0.0.1280.800" timestamp="1575976289617" />
+    <state width="1238" height="155" key="GridCell.Tab.0.left" timestamp="1575976289617">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575970848683" />
-    <state width="1238" height="155" key="GridCell.Tab.0.right" timestamp="1575970848684">
+    <state width="1238" height="155" key="GridCell.Tab.0.left/0.0.1280.800@0.0.1280.800" timestamp="1575976289617" />
+    <state width="1238" height="155" key="GridCell.Tab.0.right" timestamp="1575976289618">
       <screen x="0" y="0" width="1280" height="800" />
     </state>
-    <state width="1238" height="155" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575970848684" />
+    <state width="1238" height="155" key="GridCell.Tab.0.right/0.0.1280.800@0.0.1280.800" timestamp="1575976289618" />
     <state x="319" y="232" key="com.intellij.ide.util.TipDialog" timestamp="1575859961435">
       <screen x="0" y="0" width="1280" height="800" />
     </state>

@@ -265,7 +265,8 @@ public class QueryProcessor {
         }
         return null;
     }
-    
+
+    /*
     // Performs analysis of the frames at the given filepath using OpenCV
     public static OpenCVColorResults processOpenCVColor(String filepath, boolean isQuery)
     {
@@ -281,6 +282,7 @@ public class QueryProcessor {
 
         return opcv;
     }
+    */
 
     // Performs analysis of the frames at the given filepath using OpenCV
     public static OpenCVMotionResults processOpenCVMotion(String filepath)
@@ -417,7 +419,7 @@ public class QueryProcessor {
             System.out.println("Processing DB Video: " + videoDirectory);
             // Process objects
             dbVideoResults.objectResults = processGoogleCloudObjects(databaseVideoFilepath);
-            // Process color
+            // Process color (Not in used anymore)
             dbVideoResults.colorResults = processColor(databaseVideoFilepath, false);
             // Process motion
             dbVideoResults.motionResults = processOpenCVMotion(databaseVideoFilepath);

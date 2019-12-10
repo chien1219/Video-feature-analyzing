@@ -1,24 +1,5 @@
 package com.mycompany.videoquerying;
 
-import static com.mycompany.videoquerying.OpenCVIntel.*;
-
-import static com.mycompany.videoquerying.GcloudVideoIntel.analyzeLabels;
-import static com.mycompany.videoquerying.GcloudVideoIntel.analyzeLabelsFromCloud;
-import static com.mycompany.videoquerying.GcloudVideoIntel.uploadFiles;
-import static com.mycompany.videoquerying.QueryProcessor.*;
-
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
-import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Objects;
-import java.util.Random;
-import java.util.ResourceBundle;
 import javafx.application.Platform;
 import javafx.beans.InvalidationListener;
 import javafx.beans.value.ChangeListener;
@@ -27,19 +8,23 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.chart.AreaChart;
-import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
-import javafx.scene.control.CheckBox;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
-import javafx.scene.control.Slider;
-import javafx.scene.control.TextField;
-import javafx.scene.control.ToggleGroup;
+import javafx.scene.control.*;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
 import javafx.scene.paint.Color;
 import javafx.util.Duration;
+
+import java.io.File;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Objects;
+import java.util.ResourceBundle;
+
+import static com.mycompany.videoquerying.OpenCVIntel.CVInit;
+import static com.mycompany.videoquerying.QueryProcessor.*;
 
 public class FXMLController implements Initializable {
     
