@@ -1,0 +1,61 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: robot
+Video label category: technology
+Video label category: machine
+Segment location: 0.000:4.97
+Confidence: 0.4777521
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: mecha
+Shot label category: machine
+Segment location: 0.000:1.83
+Confidence: 0.6623493
+Segment location: 1.867:2.83
+Confidence: 0.4337978
+------------------------
+Shot label: machine
+Segment location: 0.000:1.83
+Confidence: 0.87907314
+Segment location: 1.867:2.83
+Confidence: 0.84948254
+------------------------
+Shot label: stage
+Shot label category: location
+Segment location: 2.867:4.37
+Confidence: 0.759072
+------------------------
+Shot label: action figure
+Shot label category: toy
+Segment location: 0.000:1.83
+Confidence: 0.6624589
+------------------------
+Shot label: special effects
+Shot label category: person
+Segment location: 2.867:4.37
+Confidence: 0.47928995
+------------------------
+Shot label: performance
+Shot label category: event
+Shot label category: entertainment
+Segment location: 2.867:4.37
+Confidence: 0.8314256
+------------------------
+Shot label: robot
+Shot label category: technology
+Shot label category: machine
+Segment location: 0.000:1.83
+Confidence: 0.91565263
+Segment location: 1.867:2.83
+Confidence: 0.7487664
+------------------------
+Shot label: performance art
+Shot label category: entertainment
+Segment location: 2.867:4.37
+Confidence: 0.63950133
+------------------------
+Shot label: performing arts
+Shot label category: entertainment
+Segment location: 2.867:4.37
+Confidence: 0.7447818
+------------------------

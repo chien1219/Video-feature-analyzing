@@ -1,0 +1,366 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: performance art
+Video label category: entertainment
+Segment location: 0.000:19.97
+Confidence: 0.642463
+------------------------
+Video label: singing
+Video label category: entertainment
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.43371597
+------------------------
+Video label: stage
+Video label category: location
+Segment location: 0.000:19.97
+Confidence: 0.6931799
+------------------------
+Video label: performing arts
+Video label category: entertainment
+Segment location: 0.000:19.97
+Confidence: 0.66442174
+------------------------
+Video label: performance
+Video label category: event
+Video label category: entertainment
+Segment location: 0.000:19.97
+Confidence: 0.8227992
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: black
+Segment location: 0.000:0.47
+Confidence: 0.4614014
+------------------------
+Shot label: public speaking
+Shot label category: person
+Segment location: 5.633:7.13
+Confidence: 0.6619268
+Segment location: 13.767:15.17
+Confidence: 0.48166475
+------------------------
+Shot label: display device
+Shot label category: technology
+Segment location: 2.533:4.10
+Confidence: 0.48804963
+------------------------
+Shot label: orator
+Shot label category: person
+Segment location: 5.633:7.13
+Confidence: 0.602371
+------------------------
+Shot label: music venue
+Shot label category: location
+Segment location: 12.367:13.73
+Confidence: 0.7059436
+Segment location: 17.800:18.70
+Confidence: 0.7449719
+Segment location: 18.733:19.53
+Confidence: 0.72523445
+------------------------
+Shot label: formal wear
+Shot label category: clothing
+Segment location: 4.133:5.60
+Confidence: 0.6478287
+Segment location: 5.633:7.13
+Confidence: 0.6478287
+Segment location: 13.767:15.17
+Confidence: 0.6478287
+------------------------
+Shot label: pianist
+Shot label category: musician
+Segment location: 11.333:12.33
+Confidence: 0.6854948
+------------------------
+Shot label: fun
+Segment location: 15.200:16.33
+Confidence: 0.5400928
+------------------------
+Shot label: singer songwriter
+Shot label category: person
+Segment location: 11.333:12.33
+Confidence: 0.42607248
+------------------------
+Shot label: humour
+Shot label category: person
+Segment location: 5.633:7.13
+Confidence: 0.62475
+------------------------
+Shot label: theatre
+Shot label category: entertainment
+Segment location: 5.633:7.13
+Confidence: 0.40176165
+Segment location: 15.200:16.33
+Confidence: 0.49335602
+------------------------
+Shot label: folk instrument
+Segment location: 11.333:12.33
+Confidence: 0.524897
+------------------------
+Shot label: concert
+Shot label category: performance
+Segment location: 11.333:12.33
+Confidence: 0.52506095
+Segment location: 18.733:19.53
+Confidence: 0.45471686
+------------------------
+Shot label: night
+Segment location: 0.000:0.47
+Confidence: 0.4566016
+Segment location: 0.967:2.50
+Confidence: 0.8329971
+------------------------
+Shot label: singing
+Shot label category: entertainment
+Shot label category: person
+Segment location: 4.133:5.60
+Confidence: 0.43371597
+Segment location: 5.633:7.13
+Confidence: 0.6891632
+Segment location: 11.333:12.33
+Confidence: 0.7968172
+Segment location: 15.200:16.33
+Confidence: 0.8603468
+Segment location: 16.967:17.77
+Confidence: 0.5143355
+Segment location: 17.800:18.70
+Confidence: 0.43371597
+Segment location: 18.733:19.53
+Confidence: 0.7284453
+------------------------
+Shot label: comedy
+Segment location: 5.633:7.13
+Confidence: 0.7072295
+------------------------
+Shot label: bassist
+Shot label category: person
+Segment location: 11.333:12.33
+Confidence: 0.4212025
+------------------------
+Shot label: guitar
+Segment location: 11.333:12.33
+Confidence: 0.6469516
+------------------------
+Shot label: speech
+Shot label category: person
+Segment location: 4.133:5.60
+Confidence: 0.4535124
+Segment location: 5.633:7.13
+Confidence: 0.6876033
+Segment location: 13.767:15.17
+Confidence: 0.552028
+------------------------
+Shot label: song
+Shot label category: music
+Segment location: 4.133:5.60
+Confidence: 0.6514255
+Segment location: 5.633:7.13
+Confidence: 0.7181596
+Segment location: 11.333:12.33
+Confidence: 0.8644546
+Segment location: 13.767:15.17
+Confidence: 0.5138889
+Segment location: 15.200:16.33
+Confidence: 0.76968855
+Segment location: 16.967:17.77
+Confidence: 0.5637414
+Segment location: 18.733:19.53
+Confidence: 0.9278625
+------------------------
+Shot label: dance
+Shot label category: event
+Segment location: 7.167:8.40
+Confidence: 0.53832513
+Segment location: 12.367:13.73
+Confidence: 0.53832513
+Segment location: 15.200:16.33
+Confidence: 0.53832513
+------------------------
+Shot label: performance
+Shot label category: event
+Shot label category: entertainment
+Segment location: 2.533:4.10
+Confidence: 0.44476023
+Segment location: 4.133:5.60
+Confidence: 0.6150597
+Segment location: 5.633:7.13
+Confidence: 0.7927035
+Segment location: 7.167:8.40
+Confidence: 0.8314256
+Segment location: 11.333:12.33
+Confidence: 0.9416846
+Segment location: 12.367:13.73
+Confidence: 0.5596431
+Segment location: 15.200:16.33
+Confidence: 0.88252884
+Segment location: 16.967:17.77
+Confidence: 0.53148216
+Segment location: 17.800:18.70
+Confidence: 0.79269016
+Segment location: 18.733:19.53
+Confidence: 0.90014815
+------------------------
+Shot label: musical instrument
+Segment location: 11.333:12.33
+Confidence: 0.9165023
+------------------------
+Shot label: special effects
+Shot label category: person
+Segment location: 12.367:13.73
+Confidence: 0.81752986
+------------------------
+Shot label: neon
+Segment location: 12.367:13.73
+Confidence: 0.6545038
+------------------------
+Shot label: nightclub
+Shot label category: location
+Segment location: 12.367:13.73
+Confidence: 0.8680704
+Segment location: 17.800:18.70
+Confidence: 0.90399307
+Segment location: 18.733:19.53
+Confidence: 0.90399307
+------------------------
+Shot label: plucked string instruments
+Segment location: 11.333:12.33
+Confidence: 0.6805515
+------------------------
+Shot label: performing arts
+Shot label category: entertainment
+Segment location: 5.633:7.13
+Confidence: 0.6231461
+Segment location: 7.167:8.40
+Confidence: 0.7068157
+Segment location: 11.333:12.33
+Confidence: 0.49256495
+Segment location: 12.367:13.73
+Confidence: 0.52759373
+Segment location: 15.200:16.33
+Confidence: 0.80691385
+Segment location: 17.800:18.70
+Confidence: 0.6664993
+Segment location: 18.733:19.53
+Confidence: 0.74792314
+------------------------
+Shot label: string instrument
+Segment location: 11.333:12.33
+Confidence: 0.6999984
+------------------------
+Shot label: darkroom
+Shot label category: photography
+Shot label category: room
+Segment location: 2.533:4.10
+Confidence: 0.618912
+Segment location: 12.367:13.73
+Confidence: 0.5094371
+Segment location: 17.800:18.70
+Confidence: 0.68632597
+------------------------
+Shot label: guitarist
+Shot label category: musician
+Segment location: 11.333:12.33
+Confidence: 0.98558813
+------------------------
+Shot label: laser
+Shot label category: technology
+Segment location: 12.367:13.73
+Confidence: 0.83253413
+------------------------
+Shot label: television program
+Segment location: 5.633:7.13
+Confidence: 0.4255182
+Segment location: 13.767:15.17
+Confidence: 0.4255182
+------------------------
+Shot label: black and white
+Shot label category: style
+Segment location: 0.000:0.47
+Confidence: 0.5847567
+------------------------
+Shot label: lighting
+Segment location: 0.967:2.50
+Confidence: 0.4297279
+Segment location: 2.533:4.10
+Confidence: 0.55736107
+Segment location: 12.367:13.73
+Confidence: 0.48509157
+Segment location: 17.800:18.70
+Confidence: 0.44096813
+------------------------
+Shot label: neon sign
+Segment location: 12.367:13.73
+Confidence: 0.48675442
+------------------------
+Shot label: performance art
+Shot label category: entertainment
+Segment location: 5.633:7.13
+Confidence: 0.45872158
+Segment location: 7.167:8.40
+Confidence: 0.6317507
+Segment location: 15.200:16.33
+Confidence: 0.7654726
+Segment location: 17.800:18.70
+Confidence: 0.4038668
+Segment location: 18.733:19.53
+Confidence: 0.63950133
+------------------------
+Shot label: individual sports
+Shot label category: sports
+Segment location: 7.167:8.40
+Confidence: 0.42590004
+------------------------
+Shot label: stand-up comedy
+Segment location: 5.633:7.13
+Confidence: 0.56094676
+------------------------
+Shot label: light
+Segment location: 0.967:2.50
+Confidence: 0.40042225
+Segment location: 2.533:4.10
+Confidence: 0.48352656
+Segment location: 12.367:13.73
+Confidence: 0.5470566
+Segment location: 17.800:18.70
+Confidence: 0.46271324
+------------------------
+Shot label: stage
+Shot label category: location
+Segment location: 5.633:7.13
+Confidence: 0.8011922
+Segment location: 9.233:11.30
+Confidence: 0.44067946
+Segment location: 12.367:13.73
+Confidence: 0.54636365
+Segment location: 15.200:16.33
+Confidence: 0.85001
+Segment location: 16.967:17.77
+Confidence: 0.46024638
+Segment location: 17.800:18.70
+Confidence: 0.7691097
+Segment location: 18.733:19.53
+Confidence: 0.89896667
+------------------------
+Shot label: suit
+Shot label category: clothing
+Segment location: 5.633:7.13
+Confidence: 0.4327841
+Segment location: 13.767:15.17
+Confidence: 0.64046407
+------------------------
+Shot label: vehicle
+Segment location: 0.967:2.50
+Confidence: 0.45293975
+------------------------
+Shot label: dress
+Shot label category: clothing
+Segment location: 15.200:16.33
+Confidence: 0.4698576
+------------------------
+Shot label: fashion
+Segment location: 4.133:5.60
+Confidence: 0.4041215
+Segment location: 15.200:16.33
+Confidence: 0.40813398
+------------------------

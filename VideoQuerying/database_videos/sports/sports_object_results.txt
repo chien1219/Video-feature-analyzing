@@ -1,0 +1,279 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: ball game
+Video label category: sports
+Segment location: 0.000:19.97
+Confidence: 0.90918946
+------------------------
+Video label: sport venue
+Video label category: location
+Video label category: structure
+Segment location: 0.000:19.97
+Confidence: 0.8237426
+------------------------
+Video label: basketball moves
+Video label category: basketball
+Segment location: 0.000:19.97
+Confidence: 1.0
+------------------------
+Video label: tournament
+Video label category: event
+Segment location: 0.000:19.97
+Confidence: 0.49310362
+------------------------
+Video label: basketball
+Video label category: sports
+Segment location: 0.000:19.97
+Confidence: 0.9975047
+------------------------
+Video label: crowd
+Video label category: people
+Segment location: 0.000:19.97
+Confidence: 0.69587743
+------------------------
+Video label: games
+Segment location: 0.000:19.97
+Confidence: 0.87498796
+------------------------
+Video label: basketball official
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.49702647
+------------------------
+Video label: slam dunk
+Video label category: basketball
+Segment location: 0.000:19.97
+Confidence: 0.6501582
+------------------------
+Video label: basketball court
+Video label category: location
+Video label category: structure
+Segment location: 0.000:19.97
+Confidence: 0.9980923
+------------------------
+Video label: people
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.64613587
+------------------------
+Video label: sports
+Segment location: 0.000:19.97
+Confidence: 0.9463351
+------------------------
+Video label: golden state warriors
+Segment location: 0.000:19.97
+Confidence: 0.94214875
+------------------------
+Video label: nba
+Segment location: 0.000:19.97
+Confidence: 0.96654385
+------------------------
+Video label: team sport
+Video label category: sports
+Segment location: 0.000:19.97
+Confidence: 0.94847345
+------------------------
+Video label: audience
+Video label category: people
+Segment location: 0.000:19.97
+Confidence: 0.7939098
+------------------------
+Video label: arena
+Video label category: location
+Video label category: structure
+Segment location: 0.000:19.97
+Confidence: 0.70794153
+------------------------
+Video label: team
+Video label category: organization
+Segment location: 0.000:19.97
+Confidence: 0.5927326
+------------------------
+Video label: basketball player
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.99668723
+------------------------
+Video label: player
+Segment location: 0.000:19.97
+Confidence: 0.7646909
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: basketball
+Shot label category: sports
+Segment location: 0.000:6.83
+Confidence: 0.99864876
+Segment location: 6.867:12.47
+Confidence: 0.99332386
+Segment location: 12.500:19.97
+Confidence: 0.9912106
+------------------------
+Shot label: stadium
+Shot label category: location
+Shot label category: structure
+Segment location: 0.000:6.83
+Confidence: 0.8400653
+------------------------
+Shot label: tournament
+Shot label category: event
+Segment location: 0.000:6.83
+Confidence: 0.45080373
+------------------------
+Shot label: sport venue
+Shot label category: location
+Shot label category: structure
+Segment location: 0.000:6.83
+Confidence: 0.901
+Segment location: 6.867:12.47
+Confidence: 0.79133373
+Segment location: 12.500:19.97
+Confidence: 0.7791599
+------------------------
+Shot label: basketball moves
+Shot label category: basketball
+Segment location: 0.000:6.83
+Confidence: 0.9699437
+Segment location: 6.867:12.47
+Confidence: 0.9640487
+Segment location: 12.500:19.97
+Confidence: 0.9688809
+------------------------
+Shot label: basketball court
+Shot label category: location
+Shot label category: structure
+Segment location: 0.000:6.83
+Confidence: 1.0
+Segment location: 6.867:12.47
+Confidence: 0.989027
+Segment location: 12.500:19.97
+Confidence: 0.92284095
+------------------------
+Shot label: people
+Shot label category: person
+Segment location: 0.000:6.83
+Confidence: 0.56119597
+Segment location: 6.867:12.47
+Confidence: 0.5407408
+Segment location: 12.500:19.97
+Confidence: 0.64599764
+------------------------
+Shot label: slam dunk
+Shot label category: basketball
+Segment location: 0.000:6.83
+Confidence: 0.5251158
+Segment location: 6.867:12.47
+Confidence: 0.4201138
+Segment location: 12.500:19.97
+Confidence: 0.60959446
+------------------------
+Shot label: games
+Segment location: 0.000:6.83
+Confidence: 0.8635999
+Segment location: 6.867:12.47
+Confidence: 0.87590045
+Segment location: 12.500:19.97
+Confidence: 0.8635999
+------------------------
+Shot label: crowd
+Shot label category: people
+Segment location: 0.000:6.83
+Confidence: 0.70044625
+Segment location: 12.500:19.97
+Confidence: 0.64745057
+------------------------
+Shot label: basketball official
+Shot label category: person
+Segment location: 6.867:12.47
+Confidence: 0.47705764
+Segment location: 12.500:19.97
+Confidence: 0.48421818
+------------------------
+Shot label: audience
+Shot label category: people
+Segment location: 0.000:6.83
+Confidence: 0.789378
+Segment location: 6.867:12.47
+Confidence: 0.62037903
+Segment location: 12.500:19.97
+Confidence: 0.789378
+------------------------
+Shot label: arena
+Shot label category: location
+Shot label category: structure
+Segment location: 0.000:6.83
+Confidence: 0.81161416
+------------------------
+Shot label: nba
+Segment location: 0.000:6.83
+Confidence: 0.9783072
+Segment location: 6.867:12.47
+Confidence: 0.8564548
+Segment location: 12.500:19.97
+Confidence: 0.8888889
+------------------------
+Shot label: team sport
+Shot label category: sports
+Segment location: 0.000:6.83
+Confidence: 0.9660803
+Segment location: 6.867:12.47
+Confidence: 0.91655356
+Segment location: 12.500:19.97
+Confidence: 0.94253314
+------------------------
+Shot label: golden state warriors
+Segment location: 0.000:6.83
+Confidence: 0.90612245
+------------------------
+Shot label: sports
+Segment location: 0.000:6.83
+Confidence: 0.9649776
+Segment location: 6.867:12.47
+Confidence: 0.9386852
+Segment location: 12.500:19.97
+Confidence: 0.91606283
+------------------------
+Shot label: ball game
+Shot label category: sports
+Segment location: 0.000:6.83
+Confidence: 0.9122204
+Segment location: 6.867:12.47
+Confidence: 0.8824185
+Segment location: 12.500:19.97
+Confidence: 0.8824185
+------------------------
+Shot label: player
+Segment location: 0.000:6.83
+Confidence: 0.7281684
+Segment location: 6.867:12.47
+Confidence: 0.7281684
+Segment location: 12.500:19.97
+Confidence: 0.76432085
+------------------------
+Shot label: ball
+Segment location: 6.867:12.47
+Confidence: 0.79209155
+Segment location: 12.500:19.97
+Confidence: 0.5440567
+------------------------
+Shot label: play
+Shot label category: person
+Segment location: 6.867:12.47
+Confidence: 0.7505701
+------------------------
+Shot label: basketball player
+Shot label category: person
+Segment location: 0.000:6.83
+Confidence: 0.9945733
+Segment location: 6.867:12.47
+Confidence: 0.9917475
+Segment location: 12.500:19.97
+Confidence: 0.99588263
+------------------------
+Shot label: team
+Shot label category: organization
+Segment location: 6.867:12.47
+Confidence: 0.4782716
+Segment location: 12.500:19.97
+Confidence: 0.61278373
+------------------------

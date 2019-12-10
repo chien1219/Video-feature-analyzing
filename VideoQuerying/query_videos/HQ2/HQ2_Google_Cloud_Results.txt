@@ -1,0 +1,73 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: car
+Video label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.59615225
+------------------------
+Video label: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.63204587
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: luxury vehicle
+Shot label category: car
+Segment location: 0.200:1.17
+Confidence: 0.46843123
+------------------------
+Shot label: motor vehicle
+Shot label category: vehicle
+Segment location: 0.200:1.17
+Confidence: 0.6780094
+------------------------
+Shot label: windshield
+Shot label category: glass
+Shot label category: window
+Segment location: 0.200:1.17
+Confidence: 0.5709748
+------------------------
+Shot label: automotive lighting
+Segment location: 0.200:1.17
+Confidence: 0.85601884
+------------------------
+Shot label: automotive design
+Segment location: 0.200:1.17
+Confidence: 0.749524
+------------------------
+Shot label: sports car
+Shot label category: car
+Segment location: 0.200:1.17
+Confidence: 0.93241
+------------------------
+Shot label: vehicle
+Segment location: 0.200:1.17
+Confidence: 0.95196277
+------------------------
+Shot label: land vehicle
+Shot label category: vehicle
+Segment location: 0.200:1.17
+Confidence: 0.496
+------------------------
+Shot label: car
+Shot label category: vehicle
+Segment location: 0.200:1.17
+Confidence: 0.98466504
+------------------------
+Shot label: automotive exterior
+Segment location: 0.200:1.17
+Confidence: 0.4256445
+------------------------
+Shot label: headlamp
+Shot label category: light
+Segment location: 0.200:1.17
+Confidence: 0.46290722
+------------------------
+Shot label: mode of transport
+Segment location: 0.200:1.17
+Confidence: 0.4264085
+------------------------
+Shot label: supercar
+Shot label category: sports car
+Segment location: 0.200:1.17
+Confidence: 0.5423346
+------------------------

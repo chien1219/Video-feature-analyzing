@@ -1,0 +1,6 @@
+{
+   "inputUri":"gs://cloud-ml-sandbox/video/chicago.mp4",
+   "features": [
+       "LABEL_DETECTION"
+   ]
+}

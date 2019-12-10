@@ -1,0 +1,8 @@
+Manifest-Version: 1.0
+Specification-Title: gax-httpjson
+Specification-Version: 0.40.0
+Specification-Vendor: Google
+Implementation-Title: gax-httpjson
+Implementation-Version: 0.40.0
+Implementation-Vendor: Google
+

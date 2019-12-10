@@ -1,0 +1,219 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: street
+Video label category: road
+Segment location: 0.000:4.97
+Confidence: 0.9719301
+------------------------
+Video label: traffic congestion
+Video label category: event
+Segment location: 0.000:4.97
+Confidence: 0.9690918
+------------------------
+Video label: dashcam
+Segment location: 0.000:4.97
+Confidence: 0.45756027
+------------------------
+Video label: urban area
+Video label category: city
+Segment location: 0.000:4.97
+Confidence: 0.7790003
+------------------------
+Video label: motor vehicle
+Video label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.5482356
+------------------------
+Video label: highway
+Video label category: road
+Segment location: 0.000:4.97
+Confidence: 0.7689174
+------------------------
+Video label: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.95558035
+------------------------
+Video label: car
+Video label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.91671175
+------------------------
+Video label: infrastructure
+Segment location: 0.000:4.97
+Confidence: 0.5517568
+------------------------
+Video label: metropolitan area
+Video label category: city
+Segment location: 0.000:4.97
+Confidence: 0.7318949
+------------------------
+Video label: mode of transport
+Segment location: 0.000:4.97
+Confidence: 0.5167576
+------------------------
+Video label: pedestrian
+Video label category: person
+Segment location: 0.000:4.97
+Confidence: 0.60068953
+------------------------
+Video label: neighbourhood
+Video label category: geographical feature
+Segment location: 0.000:4.97
+Confidence: 0.4011557
+------------------------
+Video label: road
+Segment location: 0.000:4.97
+Confidence: 0.9344013
+------------------------
+Video label: traffic
+Segment location: 0.000:4.97
+Confidence: 1.0
+------------------------
+Video label: downtown
+Video label category: city
+Segment location: 0.000:4.97
+Confidence: 0.61016244
+------------------------
+Video label: public transport
+Video label category: transport
+Segment location: 0.000:4.97
+Confidence: 0.7146149
+------------------------
+Video label: intersection
+Video label category: street
+Segment location: 0.000:4.97
+Confidence: 0.9652997
+------------------------
+Video label: traffic light
+Video label category: weak entity
+Video label category: lighting
+Segment location: 0.000:4.97
+Confidence: 0.8057062
+------------------------
+Video label: truck
+Video label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.4883582
+------------------------
+Video label: asphalt
+Segment location: 0.000:4.97
+Confidence: 0.42739272
+------------------------
+Video label: lane
+Video label category: road
+Segment location: 0.000:4.97
+Confidence: 0.6582961
+------------------------
+Video label: transport
+Segment location: 0.000:4.97
+Confidence: 0.69835633
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: car
+Shot label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.91671175
+------------------------
+Shot label: downtown
+Shot label category: city
+Segment location: 0.000:4.97
+Confidence: 0.61016244
+------------------------
+Shot label: traffic
+Segment location: 0.000:4.97
+Confidence: 1.0
+------------------------
+Shot label: pedestrian
+Shot label category: person
+Segment location: 0.000:4.97
+Confidence: 0.60068953
+------------------------
+Shot label: neighbourhood
+Shot label category: geographical feature
+Segment location: 0.000:4.97
+Confidence: 0.4011557
+------------------------
+Shot label: road
+Segment location: 0.000:4.97
+Confidence: 0.9344013
+------------------------
+Shot label: transport
+Segment location: 0.000:4.97
+Confidence: 0.69835633
+------------------------
+Shot label: street
+Shot label category: road
+Segment location: 0.000:4.97
+Confidence: 0.9719301
+------------------------
+Shot label: dashcam
+Segment location: 0.000:4.97
+Confidence: 0.45756027
+------------------------
+Shot label: asphalt
+Segment location: 0.000:4.97
+Confidence: 0.42739272
+------------------------
+Shot label: lane
+Shot label category: road
+Segment location: 0.000:4.97
+Confidence: 0.6582961
+------------------------
+Shot label: intersection
+Shot label category: street
+Segment location: 0.000:4.97
+Confidence: 0.9652997
+------------------------
+Shot label: traffic light
+Shot label category: weak entity
+Shot label category: lighting
+Segment location: 0.000:4.97
+Confidence: 0.8057062
+------------------------
+Shot label: truck
+Shot label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.4883582
+------------------------
+Shot label: public transport
+Shot label category: transport
+Segment location: 0.000:4.97
+Confidence: 0.7146149
+------------------------
+Shot label: motor vehicle
+Shot label category: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.5482356
+------------------------
+Shot label: urban area
+Shot label category: city
+Segment location: 0.000:4.97
+Confidence: 0.7790003
+------------------------
+Shot label: traffic congestion
+Shot label category: event
+Segment location: 0.000:4.97
+Confidence: 0.9690918
+------------------------
+Shot label: metropolitan area
+Shot label category: city
+Segment location: 0.000:4.97
+Confidence: 0.7318949
+------------------------
+Shot label: mode of transport
+Segment location: 0.000:4.97
+Confidence: 0.5167576
+------------------------
+Shot label: infrastructure
+Segment location: 0.000:4.97
+Confidence: 0.5517568
+------------------------
+Shot label: highway
+Shot label category: road
+Segment location: 0.000:4.97
+Confidence: 0.7689174
+------------------------
+Shot label: vehicle
+Segment location: 0.000:4.97
+Confidence: 0.95558035
+------------------------

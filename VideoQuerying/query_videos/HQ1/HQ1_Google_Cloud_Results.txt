@@ -1,0 +1,44 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: video game
+Segment location: 0.000:4.97
+Confidence: 0.41994485
+------------------------
+Video label: action game
+Segment location: 0.000:4.97
+Confidence: 0.70682627
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: video game
+Segment location: 0.000:1.83
+Confidence: 0.4026863
+------------------------
+Shot label: film
+Shot label category: entertainment
+Segment location: 4.067:4.97
+Confidence: 0.6339489
+------------------------
+Shot label: emotion
+Shot label category: person
+Segment location: 4.067:4.97
+Confidence: 0.40443704
+------------------------
+Shot label: head
+Segment location: 4.067:4.97
+Confidence: 0.41234353
+------------------------
+Shot label: pc game
+Shot label category: software
+Segment location: 1.867:4.03
+Confidence: 0.41869432
+------------------------
+Shot label: human
+Segment location: 4.067:4.97
+Confidence: 0.9849126
+------------------------
+Shot label: action game
+Segment location: 0.000:1.83
+Confidence: 0.69721884
+Segment location: 1.867:4.03
+Confidence: 0.6277514
+------------------------

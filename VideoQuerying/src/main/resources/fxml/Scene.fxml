@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+
+<AnchorPane id="AnchorPane" prefHeight="744.0" prefWidth="919.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.videoquerying.FXMLController">
+    <children>
+      <TextField fx:id="txtQueryVideo" layoutX="198.0" layoutY="34.0" prefHeight="27.0" prefWidth="239.0" />
+      <Label fx:id="lblSelectQueryVideo" layoutX="24.0" layoutY="39.0" text="Select Query Video:" />
+      <Label fx:id="lblSelectDescriptors" layoutX="25.0" layoutY="90.0" text="Select Video Descriptors:" />
+      <Button fx:id="btnSearch" layoutX="24.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Search" />
+      <Label fx:id="lblResults" layoutX="526.0" layoutY="25.0" text="Results:" />
+      <Label fx:id="lblVisualMatch" layoutX="526.0" layoutY="129.0" text="Visual Match" />
+      <Label fx:id="lblResultVideoPreview" layoutX="529.0" layoutY="297.0" text="Video Preview:" />
+      <Label fx:id="lblQueryVideoPreview" layoutX="25.0" layoutY="297.0" text="Query Video Preview" />
+      <MediaView fx:id="mvDatabaseVideo" fitHeight="288.0" fitWidth="352.0" layoutX="529.0" layoutY="326.0" />
+      <MediaView fx:id="mvQueryVideo" fitHeight="288.0" fitWidth="352.0" layoutX="24.0" layoutY="326.0" />
+      <ListView fx:id="lstviewResultsList" layoutX="526.0" layoutY="49.0" prefHeight="75.0" prefWidth="352.0" />
+      <Label fx:id="lblQueryStatus" layoutX="103.0" layoutY="247.0" text="Query Status:" />
+      <Button fx:id="btnVideoPlay" layoutX="573.0" layoutY="655.0" mnemonicParsing="false" onAction="#playDatabaseVideo" prefHeight="27.0" prefWidth="75.0" text="Play" />
+      <Button fx:id="btnVideoPause" layoutX="664.0" layoutY="655.0" mnemonicParsing="false" onAction="#pauseDatabaseVideo" prefWidth="75.0" text="Pause" />
+      <Button fx:id="btnVideoStop" layoutX="757.0" layoutY="655.0" mnemonicParsing="false" onAction="#stopDatabaseVideo" prefWidth="75.0" text="Stop" />
+      <Button fx:id="btnQueryPlay" layoutX="55.0" layoutY="655.0" mnemonicParsing="false" onAction="#playQueryVideo" prefHeight="27.0" prefWidth="75.0" text="Play" />
+      <Button fx:id="btnQueryPause" layoutX="146.0" layoutY="655.0" mnemonicParsing="false" onAction="#pauseQueryVideo" prefWidth="75.0" text="Pause" />
+      <Button fx:id="btnQueryStop" layoutX="239.0" layoutY="655.0" mnemonicParsing="false" onAction="#stopQueryVideo" prefWidth="75.0" text="Stop" />
+      <Slider fx:id="databaseSlider" blockIncrement="1.0" layoutX="529.0" layoutY="621.0" prefHeight="16.0" prefWidth="352.0" />
+      <Slider fx:id="querySlider" blockIncrement="1.0" layoutX="22.0" layoutY="621.0" max="150.0" prefHeight="16.0" prefWidth="352.0" />
+      <AreaChart fx:id="chtVisualMatch" createSymbols="false" layoutX="479.0" layoutY="147.0" prefHeight="150.0" prefWidth="413.0">
+        <xAxis>
+          <NumberAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </AreaChart>
+      <CheckBox fx:id="chkColor" layoutX="53.0" layoutY="124.0" mnemonicParsing="false" selected="true" text="Color" />
+      <CheckBox fx:id="chkMotion" layoutX="53.0" layoutY="149.0" mnemonicParsing="false" text="Motion" />
+      <CheckBox fx:id="chkObjects" layoutX="53.0" layoutY="174.0" mnemonicParsing="false" text="Objects" />
+    </children>
+</AnchorPane>

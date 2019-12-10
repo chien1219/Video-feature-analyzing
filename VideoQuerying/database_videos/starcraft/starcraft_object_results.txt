@@ -1,0 +1,142 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: action game
+Segment location: 0.000:19.97
+Confidence: 0.70074445
+------------------------
+Video label: motorcycle
+Video label category: vehicle
+Segment location: 0.000:19.97
+Confidence: 0.4869275
+------------------------
+Video label: robot
+Video label category: technology
+Video label category: machine
+Segment location: 0.000:19.97
+Confidence: 0.71737415
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: motorcycle
+Shot label category: vehicle
+Segment location: 0.000:3.07
+Confidence: 0.9427525
+------------------------
+Shot label: song
+Shot label category: music
+Segment location: 7.500:9.37
+Confidence: 0.5637414
+------------------------
+Shot label: resident evil
+Segment location: 11.233:17.00
+Confidence: 0.696
+------------------------
+Shot label: pc game
+Shot label category: software
+Segment location: 11.233:17.00
+Confidence: 0.43865353
+------------------------
+Shot label: automotive exhaust
+Segment location: 0.000:3.07
+Confidence: 0.6488435
+------------------------
+Shot label: exhaust system
+Segment location: 0.000:3.07
+Confidence: 0.56672174
+------------------------
+Shot label: performing arts
+Shot label category: entertainment
+Segment location: 5.967:7.47
+Confidence: 0.7585587
+Segment location: 9.400:10.33
+Confidence: 0.5302636
+------------------------
+Shot label: mecha
+Shot label category: machine
+Segment location: 3.100:4.93
+Confidence: 0.6273807
+Segment location: 4.967:5.93
+Confidence: 0.5777123
+Segment location: 19.067:19.97
+Confidence: 0.5757907
+------------------------
+Shot label: action figure
+Shot label category: toy
+Segment location: 3.100:4.93
+Confidence: 0.48465386
+Segment location: 19.067:19.97
+Confidence: 0.48465386
+------------------------
+Shot label: animation
+Segment location: 4.967:5.93
+Confidence: 0.46812618
+------------------------
+Shot label: performance art
+Shot label category: entertainment
+Segment location: 5.967:7.47
+Confidence: 0.63950133
+Segment location: 9.400:10.33
+Confidence: 0.43632856
+------------------------
+Shot label: robot
+Shot label category: technology
+Shot label category: machine
+Segment location: 0.000:3.07
+Confidence: 0.45899057
+Segment location: 3.100:4.93
+Confidence: 0.9182342
+Segment location: 4.967:5.93
+Confidence: 0.835551
+Segment location: 19.067:19.97
+Confidence: 0.9146489
+------------------------
+Shot label: motor vehicle
+Shot label category: vehicle
+Segment location: 0.000:3.07
+Confidence: 0.7014303
+------------------------
+Shot label: stage
+Shot label category: location
+Segment location: 5.967:7.47
+Confidence: 0.75555557
+------------------------
+Shot label: shooter game
+Segment location: 11.233:17.00
+Confidence: 0.5217724
+------------------------
+Shot label: machine
+Segment location: 0.000:3.07
+Confidence: 0.79999036
+Segment location: 3.100:4.93
+Confidence: 0.8983161
+Segment location: 4.967:5.93
+Confidence: 0.86735785
+Segment location: 19.067:19.97
+Confidence: 0.9073654
+------------------------
+Shot label: engine
+Segment location: 0.000:3.07
+Confidence: 0.4662493
+------------------------
+Shot label: vehicle
+Segment location: 0.000:3.07
+Confidence: 0.77334315
+------------------------
+Shot label: performance
+Shot label category: event
+Shot label category: entertainment
+Segment location: 5.967:7.47
+Confidence: 0.8314256
+Segment location: 7.500:9.37
+Confidence: 0.6015375
+Segment location: 9.400:10.33
+Confidence: 0.7663149
+------------------------
+Shot label: action game
+Segment location: 11.233:17.00
+Confidence: 0.81721133
+------------------------
+Shot label: mode of transport
+Segment location: 0.000:3.07
+Confidence: 0.4110514
+------------------------

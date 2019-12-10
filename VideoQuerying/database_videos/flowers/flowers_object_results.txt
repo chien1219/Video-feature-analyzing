@@ -1,0 +1,158 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: garden
+Segment location: 0.000:19.97
+Confidence: 0.967313
+------------------------
+Video label: floristry
+Video label category: building
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.7484142
+------------------------
+Video label: flower
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.9836501
+------------------------
+Video label: perennial plant
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.59458464
+------------------------
+Video label: landscaping
+Segment location: 0.000:19.97
+Confidence: 0.9536436
+------------------------
+Video label: nature
+Segment location: 0.000:19.97
+Confidence: 0.8239737
+------------------------
+Video label: shrub
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.85491955
+------------------------
+Video label: flowering plant
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 1.0
+------------------------
+Video label: shrub
+Video label category: drink
+Segment location: 0.000:19.97
+Confidence: 0.57749206
+------------------------
+Video label: groundcover
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.5382253
+------------------------
+Video label: gardening
+Segment location: 0.000:19.97
+Confidence: 0.8883102
+------------------------
+Video label: rhododendron
+Video label category: flower
+Segment location: 0.000:19.97
+Confidence: 0.4667189
+------------------------
+Video label: flora
+Video label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.8873061
+------------------------
+Video label: plant
+Segment location: 0.000:19.97
+Confidence: 0.9858136
+------------------------
+Video label: floral design
+Video label category: flower
+Video label category: artwork
+Segment location: 0.000:19.97
+Confidence: 0.46767092
+------------------------
+Video label: botanical garden
+Video label category: garden
+Segment location: 0.000:19.97
+Confidence: 0.4478722
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: groundcover
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.5382253
+------------------------
+Shot label: flowering plant
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 1.0
+------------------------
+Shot label: shrub
+Shot label category: drink
+Segment location: 0.000:19.97
+Confidence: 0.57749206
+------------------------
+Shot label: shrub
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.85491955
+------------------------
+Shot label: landscaping
+Segment location: 0.000:19.97
+Confidence: 0.9536436
+------------------------
+Shot label: nature
+Segment location: 0.000:19.97
+Confidence: 0.8239737
+------------------------
+Shot label: perennial plant
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.59458464
+------------------------
+Shot label: floristry
+Shot label category: building
+Shot label category: person
+Segment location: 0.000:19.97
+Confidence: 0.7484142
+------------------------
+Shot label: flower
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.9836501
+------------------------
+Shot label: garden
+Segment location: 0.000:19.97
+Confidence: 0.967313
+------------------------
+Shot label: plant
+Segment location: 0.000:19.97
+Confidence: 0.9858136
+------------------------
+Shot label: floral design
+Shot label category: flower
+Shot label category: artwork
+Segment location: 0.000:19.97
+Confidence: 0.46767092
+------------------------
+Shot label: botanical garden
+Shot label category: garden
+Segment location: 0.000:19.97
+Confidence: 0.4478722
+------------------------
+Shot label: flora
+Shot label category: plant
+Segment location: 0.000:19.97
+Confidence: 0.8873061
+------------------------
+Shot label: gardening
+Segment location: 0.000:19.97
+Confidence: 0.8883102
+------------------------
+Shot label: rhododendron
+Shot label category: flower
+Segment location: 0.000:19.97
+Confidence: 0.4667189
+------------------------

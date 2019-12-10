@@ -1,0 +1,189 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: singing
+Video label category: entertainment
+Video label category: person
+Segment location: 0.000:4.97
+Confidence: 0.62570417
+------------------------
+Video label: song
+Video label category: music
+Segment location: 0.000:4.97
+Confidence: 0.59034765
+------------------------
+Video label: performance
+Video label category: event
+Video label category: entertainment
+Segment location: 0.000:4.97
+Confidence: 0.75761604
+------------------------
+Video label: formal wear
+Video label category: clothing
+Segment location: 0.000:4.97
+Confidence: 0.6478287
+------------------------
+Video label: performance art
+Video label category: entertainment
+Segment location: 0.000:4.97
+Confidence: 0.4380984
+------------------------
+Video label: speech
+Video label category: person
+Segment location: 0.000:4.97
+Confidence: 0.42861247
+------------------------
+Video label: performing arts
+Video label category: entertainment
+Segment location: 0.000:4.97
+Confidence: 0.53481513
+------------------------
+Video label: television program
+Segment location: 0.000:4.97
+Confidence: 0.4255182
+------------------------
+Video label: fashion
+Segment location: 0.000:4.97
+Confidence: 0.41840422
+------------------------
+Video label: stage
+Video label category: location
+Segment location: 0.000:4.97
+Confidence: 0.4828189
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: stage
+Shot label category: location
+Segment location: 3.167:4.40
+Confidence: 0.8500154
+------------------------
+Shot label: performing arts
+Shot label category: entertainment
+Segment location: 0.133:1.60
+Confidence: 0.40459922
+Segment location: 3.167:4.40
+Confidence: 0.8791465
+------------------------
+Shot label: orator
+Shot label category: person
+Segment location: 1.633:3.13
+Confidence: 0.56149346
+Segment location: 4.433:4.97
+Confidence: 0.515215
+------------------------
+Shot label: singing
+Shot label category: entertainment
+Shot label category: person
+Segment location: 0.133:1.60
+Confidence: 0.62570417
+Segment location: 1.633:3.13
+Confidence: 0.62570417
+Segment location: 3.167:4.40
+Confidence: 0.6809759
+Segment location: 4.433:4.97
+Confidence: 0.62570417
+------------------------
+Shot label: formal wear
+Shot label category: clothing
+Segment location: 0.133:1.60
+Confidence: 0.6
+Segment location: 1.633:3.13
+Confidence: 0.6478287
+Segment location: 4.433:4.97
+Confidence: 0.68857497
+------------------------
+Shot label: nightclub
+Shot label category: location
+Segment location: 3.167:4.40
+Confidence: 0.65240973
+------------------------
+Shot label: performance art
+Shot label category: entertainment
+Segment location: 3.167:4.40
+Confidence: 0.78782105
+------------------------
+Shot label: music venue
+Shot label category: location
+Segment location: 3.167:4.40
+Confidence: 0.44217938
+------------------------
+Shot label: public speaking
+Shot label category: person
+Segment location: 0.133:1.60
+Confidence: 0.41703886
+Segment location: 1.633:3.13
+Confidence: 0.6094726
+Segment location: 4.433:4.97
+Confidence: 0.4826103
+------------------------
+Shot label: choreography
+Shot label category: person
+Segment location: 3.167:4.40
+Confidence: 0.42222223
+------------------------
+Shot label: conversation
+Shot label category: communication
+Segment location: 4.433:4.97
+Confidence: 0.44140795
+------------------------
+Shot label: fashion
+Segment location: 0.133:1.60
+Confidence: 0.5698196
+Segment location: 3.167:4.40
+Confidence: 0.5698196
+Segment location: 4.433:4.97
+Confidence: 0.5698196
+------------------------
+Shot label: television program
+Segment location: 4.433:4.97
+Confidence: 0.8048608
+------------------------
+Shot label: song
+Shot label category: music
+Segment location: 0.133:1.60
+Confidence: 0.7181596
+Segment location: 1.633:3.13
+Confidence: 0.6514255
+Segment location: 3.167:4.40
+Confidence: 0.7360101
+Segment location: 4.433:4.97
+Confidence: 0.5637414
+------------------------
+Shot label: performance
+Shot label category: event
+Shot label category: entertainment
+Segment location: 0.133:1.60
+Confidence: 0.7106959
+Segment location: 1.633:3.13
+Confidence: 0.5206727
+Segment location: 3.167:4.40
+Confidence: 0.9290196
+Segment location: 4.433:4.97
+Confidence: 0.6209731
+------------------------
+Shot label: dance
+Shot label category: event
+Segment location: 3.167:4.40
+Confidence: 0.8461265
+------------------------
+Shot label: speech
+Shot label category: person
+Segment location: 0.133:1.60
+Confidence: 0.4535124
+Segment location: 1.633:3.13
+Confidence: 0.6483238
+Segment location: 4.433:4.97
+Confidence: 0.552028
+------------------------
+Shot label: suit
+Shot label category: clothing
+Segment location: 1.633:3.13
+Confidence: 0.43709093
+Segment location: 4.433:4.97
+Confidence: 0.6445908
+------------------------
+Shot label: dress
+Shot label category: clothing
+Segment location: 3.167:4.40
+Confidence: 0.4706057
+------------------------

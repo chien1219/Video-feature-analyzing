@@ -1,0 +1,238 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: trailer
+Segment location: 0.000:19.97
+Confidence: 0.69101536
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: lyrics
+Segment location: 13.167:16.17
+Confidence: 0.42222223
+------------------------
+Shot label: song
+Shot label category: music
+Segment location: 13.167:16.17
+Confidence: 0.44699144
+------------------------
+Shot label: graphic design
+Shot label category: artwork
+Segment location: 0.000:2.07
+Confidence: 0.46114063
+------------------------
+Shot label: cloud
+Segment location: 18.300:19.97
+Confidence: 0.6058685
+------------------------
+Shot label: monochrome
+Shot label category: style
+Segment location: 0.000:2.07
+Confidence: 0.4665818
+Segment location: 10.167:10.93
+Confidence: 0.5742198
+Segment location: 10.967:13.13
+Confidence: 0.57508546
+Segment location: 13.167:16.17
+Confidence: 0.40999663
+------------------------
+Shot label: sitting
+Shot label category: person
+Segment location: 10.167:10.93
+Confidence: 0.72259146
+------------------------
+Shot label: emotion
+Shot label category: person
+Segment location: 2.100:4.23
+Confidence: 0.46300134
+------------------------
+Shot label: speech
+Shot label category: person
+Segment location: 4.767:5.43
+Confidence: 0.552028
+------------------------
+Shot label: night
+Segment location: 13.167:16.17
+Confidence: 0.52206534
+------------------------
+Shot label: film
+Shot label category: entertainment
+Segment location: 10.167:10.93
+Confidence: 0.41398865
+------------------------
+Shot label: facial expression
+Shot label category: person
+Segment location: 2.100:4.23
+Confidence: 0.5040671
+------------------------
+Shot label: photograph
+Segment location: 10.167:10.93
+Confidence: 0.45180807
+------------------------
+Shot label: ocean
+Segment location: 18.300:19.97
+Confidence: 0.48890084
+------------------------
+Shot label: sadness
+Shot label category: person
+Segment location: 10.967:13.13
+Confidence: 0.41342667
+------------------------
+Shot label: sky
+Segment location: 18.300:19.97
+Confidence: 0.81967264
+------------------------
+Shot label: foot
+Shot label category: leg
+Segment location: 10.167:10.93
+Confidence: 0.43408254
+------------------------
+Shot label: evening
+Segment location: 18.300:19.97
+Confidence: 0.88596594
+------------------------
+Shot label: black
+Segment location: 0.000:2.07
+Confidence: 1.0
+Segment location: 13.167:16.17
+Confidence: 1.0
+------------------------
+Shot label: public speaking
+Shot label category: person
+Segment location: 4.767:5.43
+Confidence: 0.48124528
+------------------------
+Shot label: sunrise
+Segment location: 18.300:19.97
+Confidence: 0.5435577
+------------------------
+Shot label: text
+Segment location: 0.000:2.07
+Confidence: 0.7518167
+Segment location: 13.167:16.17
+Confidence: 0.7620418
+------------------------
+Shot label: sun
+Shot label category: astronomical object
+Segment location: 18.300:19.97
+Confidence: 0.43672636
+------------------------
+Shot label: sunset
+Segment location: 18.300:19.97
+Confidence: 0.8068955
+------------------------
+Shot label: monochrome photography
+Shot label category: photography
+Segment location: 10.167:10.93
+Confidence: 0.48085237
+Segment location: 10.967:13.13
+Confidence: 0.45854926
+------------------------
+Shot label: dusk
+Segment location: 18.300:19.97
+Confidence: 0.7192211
+------------------------
+Shot label: horizon
+Shot label category: geographical feature
+Segment location: 18.300:19.97
+Confidence: 0.8693184
+------------------------
+Shot label: lake
+Segment location: 18.300:19.97
+Confidence: 0.6718793
+------------------------
+Shot label: white
+Segment location: 10.167:10.93
+Confidence: 0.46434492
+------------------------
+Shot label: eyewear
+Segment location: 16.200:18.27
+Confidence: 0.6345564
+------------------------
+Shot label: black and white
+Shot label category: style
+Segment location: 0.000:2.07
+Confidence: 0.7696715
+Segment location: 10.167:10.93
+Confidence: 0.85931593
+Segment location: 10.967:13.13
+Confidence: 0.84572065
+Segment location: 13.167:16.17
+Confidence: 0.6983083
+------------------------
+Shot label: graphics
+Shot label category: artwork
+Segment location: 0.000:2.07
+Confidence: 0.8555977
+Segment location: 13.167:16.17
+Confidence: 0.77576756
+------------------------
+Shot label: body of water
+Segment location: 18.300:19.97
+Confidence: 0.5363801
+------------------------
+Shot label: hand
+Segment location: 10.167:10.93
+Confidence: 0.41854712
+------------------------
+Shot label: reflection
+Segment location: 18.300:19.97
+Confidence: 0.43721074
+------------------------
+Shot label: glasses
+Segment location: 16.200:18.27
+Confidence: 0.6885395
+------------------------
+Shot label: sea
+Segment location: 18.300:19.97
+Confidence: 0.6369375
+------------------------
+Shot label: interaction
+Shot label category: person
+Segment location: 2.100:4.23
+Confidence: 0.92338604
+Segment location: 4.767:5.43
+Confidence: 0.8145261
+Segment location: 8.367:10.13
+Confidence: 0.62708586
+Segment location: 10.167:10.93
+Confidence: 0.6762051
+------------------------
+Shot label: television program
+Segment location: 2.100:4.23
+Confidence: 0.6629244
+------------------------
+Shot label: nature
+Segment location: 18.300:19.97
+Confidence: 0.69435585
+------------------------
+Shot label: human
+Segment location: 10.167:10.93
+Confidence: 0.7286454
+------------------------
+Shot label: darkroom
+Shot label category: photography
+Shot label category: room
+Segment location: 10.167:10.93
+Confidence: 0.48340964
+------------------------
+Shot label: font
+Shot label category: software
+Segment location: 0.000:2.07
+Confidence: 0.620917
+Segment location: 13.167:16.17
+Confidence: 0.6306004
+------------------------
+Shot label: logo
+Shot label category: graphics
+Segment location: 0.000:2.07
+Confidence: 0.7449917
+Segment location: 13.167:16.17
+Confidence: 0.53699756
+------------------------
+Shot label: conversation
+Shot label category: communication
+Segment location: 2.100:4.23
+Confidence: 0.69730836
+Segment location: 4.767:5.43
+Confidence: 0.65292853
+------------------------

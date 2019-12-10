@@ -1,0 +1,73 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: television program
+Segment location: 0.000:19.97
+Confidence: 0.81909996
+------------------------
+Video label: speech
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.4021298
+------------------------
+Video label: newscaster
+Video label category: person
+Segment location: 0.000:19.97
+Confidence: 0.5702422
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: speech
+Shot label category: person
+Segment location: 6.767:11.50
+Confidence: 0.7021558
+------------------------
+Shot label: newscaster
+Shot label category: person
+Segment location: 6.767:11.50
+Confidence: 0.6446281
+------------------------
+Shot label: humour
+Shot label category: person
+Segment location: 0.000:4.17
+Confidence: 0.40668887
+------------------------
+Shot label: journalist
+Shot label category: professional
+Segment location: 6.767:11.50
+Confidence: 0.71005917
+------------------------
+Shot label: television program
+Segment location: 0.000:4.17
+Confidence: 0.9480124
+Segment location: 6.767:11.50
+Confidence: 0.4255182
+------------------------
+Shot label: spokesperson
+Shot label category: person
+Segment location: 6.767:11.50
+Confidence: 0.43478915
+------------------------
+Shot label: conversation
+Shot label category: communication
+Segment location: 0.000:4.17
+Confidence: 0.40221608
+Segment location: 6.767:11.50
+Confidence: 0.47034237
+Segment location: 18.967:19.97
+Confidence: 0.40221608
+------------------------
+Shot label: public speaking
+Shot label category: person
+Segment location: 6.767:11.50
+Confidence: 0.61819327
+------------------------
+Shot label: long hair
+Shot label category: hair
+Segment location: 4.200:6.73
+Confidence: 0.43766534
+------------------------
+Shot label: orator
+Shot label category: person
+Segment location: 6.767:11.50
+Confidence: 0.56149346
+------------------------

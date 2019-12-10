@@ -1,0 +1,68 @@
+********************* Results 0 *********************
+********************* Video level label annotations: *********************
+Locations: 
+Video label: machine
+Segment location: 0.000:5.50
+Confidence: 0.4638117
+------------------------
+Video label: robot
+Video label category: technology
+Video label category: machine
+Segment location: 0.000:5.50
+Confidence: 0.7158479
+------------------------
+Video label: toy block
+Video label category: toy
+Segment location: 0.000:5.50
+Confidence: 0.41186264
+------------------------
+Video label: toy
+Segment location: 0.000:5.50
+Confidence: 0.9878092
+------------------------
+Video label: the lego group
+Segment location: 0.000:5.50
+Confidence: 0.654321
+------------------------
+Video label: stop motion
+Segment location: 0.000:5.50
+Confidence: 0.40495867
+------------------------
+Video label: lego
+Video label category: toy
+Segment location: 0.000:5.50
+Confidence: 0.97790575
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: lego
+Shot label category: toy
+Segment location: 0.000:5.50
+Confidence: 0.97790575
+------------------------
+Shot label: toy
+Segment location: 0.000:5.50
+Confidence: 0.9878092
+------------------------
+Shot label: the lego group
+Segment location: 0.000:5.50
+Confidence: 0.654321
+------------------------
+Shot label: stop motion
+Segment location: 0.000:5.50
+Confidence: 0.40495867
+------------------------
+Shot label: toy block
+Shot label category: toy
+Segment location: 0.000:5.50
+Confidence: 0.41186264
+------------------------
+Shot label: robot
+Shot label category: technology
+Shot label category: machine
+Segment location: 0.000:5.50
+Confidence: 0.7158479
+------------------------
+Shot label: machine
+Segment location: 0.000:5.50
+Confidence: 0.4638117
+------------------------

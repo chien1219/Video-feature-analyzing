@@ -1,0 +1,169 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: garden
+Segment location: 0.000:4.97
+Confidence: 0.8160723
+------------------------
+Video label: flower
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.9718208
+------------------------
+Video label: floristry
+Video label category: building
+Video label category: person
+Segment location: 0.000:4.97
+Confidence: 0.7603348
+------------------------
+Video label: perennial plant
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.8463366
+------------------------
+Video label: landscaping
+Segment location: 0.000:4.97
+Confidence: 0.7006545
+------------------------
+Video label: nature
+Segment location: 0.000:4.97
+Confidence: 0.6122984
+------------------------
+Video label: shrub
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.5612222
+------------------------
+Video label: flowering plant
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 1.0
+------------------------
+Video label: gardening
+Segment location: 0.000:4.97
+Confidence: 0.7346758
+------------------------
+Video label: flora
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.7741263
+------------------------
+Video label: plant
+Segment location: 0.000:4.97
+Confidence: 0.9636239
+------------------------
+Video label: floral design
+Video label category: flower
+Video label category: artwork
+Segment location: 0.000:4.97
+Confidence: 0.62437385
+------------------------
+Video label: petal
+Segment location: 0.000:4.97
+Confidence: 0.5178466
+------------------------
+Video label: botanical garden
+Video label category: garden
+Segment location: 0.000:4.97
+Confidence: 0.43312418
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: gardening
+Segment location: 0.000:2.97
+Confidence: 0.7192984
+Segment location: 3.000:4.97
+Confidence: 0.6447966
+------------------------
+Shot label: begonia
+Shot label category: flower
+Segment location: 3.000:4.97
+Confidence: 0.5662322
+------------------------
+Shot label: flora
+Shot label category: plant
+Segment location: 0.000:2.97
+Confidence: 0.7574061
+Segment location: 3.000:4.97
+Confidence: 0.77113146
+------------------------
+Shot label: petal
+Segment location: 3.000:4.97
+Confidence: 0.5178466
+------------------------
+Shot label: leaf
+Shot label category: plant
+Segment location: 3.000:4.97
+Confidence: 0.42222223
+------------------------
+Shot label: plant
+Segment location: 0.000:2.97
+Confidence: 0.9509158
+Segment location: 3.000:4.97
+Confidence: 0.9625928
+------------------------
+Shot label: botanical garden
+Shot label category: garden
+Segment location: 0.000:2.97
+Confidence: 0.44369417
+------------------------
+Shot label: floral design
+Shot label category: flower
+Shot label category: artwork
+Segment location: 0.000:2.97
+Confidence: 0.61483055
+Segment location: 3.000:4.97
+Confidence: 0.53557324
+------------------------
+Shot label: garden
+Segment location: 0.000:2.97
+Confidence: 0.7842942
+Segment location: 3.000:4.97
+Confidence: 0.787654
+------------------------
+Shot label: perennial plant
+Shot label category: plant
+Segment location: 0.000:2.97
+Confidence: 0.8366271
+Segment location: 3.000:4.97
+Confidence: 1.0
+------------------------
+Shot label: flower
+Shot label category: plant
+Segment location: 0.000:2.97
+Confidence: 0.96974415
+Segment location: 3.000:4.97
+Confidence: 0.9700501
+------------------------
+Shot label: floristry
+Shot label category: building
+Shot label category: person
+Segment location: 0.000:2.97
+Confidence: 0.7527555
+Segment location: 3.000:4.97
+Confidence: 0.7454647
+------------------------
+Shot label: shrub
+Shot label category: plant
+Segment location: 0.000:2.97
+Confidence: 0.55375326
+Segment location: 3.000:4.97
+Confidence: 0.5554383
+------------------------
+Shot label: landscaping
+Segment location: 0.000:2.97
+Confidence: 0.6830161
+Segment location: 3.000:4.97
+Confidence: 0.6842564
+------------------------
+Shot label: nature
+Segment location: 0.000:2.97
+Confidence: 0.6122984
+Segment location: 3.000:4.97
+Confidence: 0.53797966
+------------------------
+Shot label: flowering plant
+Shot label category: plant
+Segment location: 0.000:2.97
+Confidence: 0.97496986
+Segment location: 3.000:4.97
+Confidence: 1.0
+------------------------

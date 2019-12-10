@@ -1,0 +1,133 @@
+********************* Video level label annotations: *********************
+Locations: 
+Video label: nature
+Segment location: 0.000:4.97
+Confidence: 0.8720653
+------------------------
+Video label: flora
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.83306515
+------------------------
+Video label: azalea
+Video label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.48330924
+------------------------
+Video label: gardening
+Segment location: 0.000:4.97
+Confidence: 0.6240184
+------------------------
+Video label: rhododendron
+Video label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.53125054
+------------------------
+Video label: garden
+Segment location: 0.000:4.97
+Confidence: 0.70150185
+------------------------
+Video label: plant
+Segment location: 0.000:4.97
+Confidence: 0.9540076
+------------------------
+Video label: perennial plant
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.42222223
+------------------------
+Video label: flower
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.9706051
+------------------------
+Video label: dianthus
+Video label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.5346112
+------------------------
+Video label: flowering plant
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.96911675
+------------------------
+Video label: shrub
+Video label category: drink
+Segment location: 0.000:4.97
+Confidence: 0.60173607
+------------------------
+Video label: shrub
+Video label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.8564803
+------------------------
+Video label: landscaping
+Segment location: 0.000:4.97
+Confidence: 0.90628225
+------------------------
+********************* Shot level label annotations: *********************
+Shot label: garden
+Segment location: 0.000:4.97
+Confidence: 0.70150185
+------------------------
+Shot label: dianthus
+Shot label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.5346112
+------------------------
+Shot label: flower
+Shot label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.9706051
+------------------------
+Shot label: perennial plant
+Shot label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.42222223
+------------------------
+Shot label: landscaping
+Segment location: 0.000:4.97
+Confidence: 0.90628225
+------------------------
+Shot label: nature
+Segment location: 0.000:4.97
+Confidence: 0.8720653
+------------------------
+Shot label: shrub
+Shot label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.8564803
+------------------------
+Shot label: flowering plant
+Shot label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.96911675
+------------------------
+Shot label: shrub
+Shot label category: drink
+Segment location: 0.000:4.97
+Confidence: 0.60173607
+------------------------
+Shot label: rhododendron
+Shot label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.53125054
+------------------------
+Shot label: gardening
+Segment location: 0.000:4.97
+Confidence: 0.6240184
+------------------------
+Shot label: flora
+Shot label category: plant
+Segment location: 0.000:4.97
+Confidence: 0.83306515
+------------------------
+Shot label: azalea
+Shot label category: flower
+Segment location: 0.000:4.97
+Confidence: 0.48330924
+------------------------
+Shot label: plant
+Segment location: 0.000:4.97
+Confidence: 0.9540076
+------------------------
