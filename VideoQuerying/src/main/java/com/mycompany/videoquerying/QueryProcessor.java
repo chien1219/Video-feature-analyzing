@@ -19,6 +19,8 @@ import java.util.Map.Entry;
  * @author stermark
  */
 public class QueryProcessor {
+
+    private static ColorSearch searchClass;
     
     // Returns a sorted ArrayList of the best database matches for the current query
     public static ArrayList<MatchResult> findDatabaseMatch(VideoAnalysisResults queryResults,
@@ -132,8 +134,10 @@ public class QueryProcessor {
             {
                 System.out.println("Processing color results...");
 
+                overallColorScore = queryResults.colorResults.resultMap.get(directories[i].getName());
                 // Get the GCloud object results for the current database video
-                OpenCVColorResults databaseColorResults = databaseVideoMeta.get(i).colorResults;
+                /*
+                ColorResults databaseColorResults = databaseVideoMeta.get(i).colorResults;
 
                 for (int frame = 0; frame < databaseColorResults.frames.size(); frame++)
                 {
@@ -141,6 +145,7 @@ public class QueryProcessor {
                     overallColorScore += colorFrameScore[frame];
                 }
                 overallColorScore /= (double) databaseColorResults.frames.size();
+                 */
             }
             
             /**********************************************************************/        
@@ -228,6 +233,22 @@ public class QueryProcessor {
         return Math.sqrt(Math.pow(c.r, 2) + Math.pow(c.g, 2) + Math.pow(c.b, 2));
     }
 
+    // Performs analysis of the frames at the given filename
+    public static ColorResults processColor(String filename, boolean isQuery)
+    {
+        ColorResults colorResults = new ColorResults();
+        if (isQuery)
+        {
+            colorResults.resultMap = searchClass.search(filename);
+            colorResults.frameMap = searchClass.frameMap;
+        }
+        else
+        {
+
+        }
+        return colorResults;
+    }
+
     // Performs analysis of the query video using Google Cloud object recognition
     public static GCloudResults processGoogleCloudObjects(String filePath)
     {
@@ -257,19 +278,6 @@ public class QueryProcessor {
         {
             opcv = ClusterVideoCV(filepath);
         }
-
-//        for(int i = 0; i < opcv.frames.size(); i++)
-//        {
-//            for(int j = 0; j < opcv.frames.get(i).frameColors.size(); j++)
-//            {
-//                System.out.println("For each frame:");
-//                System.out.println(opcv.frames.get(i).frameColors.get(j).r);
-//                System.out.println(opcv.frames.get(i).frameColors.get(j).g);
-//                System.out.println(opcv.frames.get(i).frameColors.get(j).b);
-//                System.out.println(opcv.frames.get(i).frameColors.get(j).percentage);
-//                System.out.println("And again:");
-//            }
-//        }
 
         return opcv;
     }
@@ -366,39 +374,59 @@ public class QueryProcessor {
     {
         // for each video in the database
         File[] directories = new File(databaseDirectory).listFiles(File::isDirectory);
-        
+
+        InitSearchClass();
+        //ProcessDBVideos(directories);
+
+        System.out.println("Finished processing all videos in the database.");
+    }
+
+    private static void InitSearchClass()
+    {
+        searchClass = new ColorSearch();
+
+        try {
+            searchClass.init();
+        } catch (IOException e) {
+            System.out.println("Search Class Initialize Error - " + e.getMessage());
+            e.printStackTrace();
+        }
+    }
+
+    private static void ProcessDBVideos(File[] directories)
+    {
         for (int i = 0; i < directories.length; i++)
         {
             // Get video directory
             String videoDirectory = directories[i].getAbsolutePath();
-            
-            System.out.println("Processing " + videoDirectory);
-            
+
+            System.out.println("Encoding DB Video: " + videoDirectory);
+
             // Encode the video (to get .png's and .mp4)
-//            encodeMp4(videoDirectory);
-            
+            encodeMp4(videoDirectory);
+
             // Get the newly created .mp4 video filepath
             String databaseVideoFilepath = directories[i].getAbsolutePath() + "/" + directories[i].getName() + ".mp4";
-            
+
             // Setup VideoAnalysisResults for the current video
             VideoAnalysisResults dbVideoResults = new VideoAnalysisResults();
-            
+
             // Get video name
             dbVideoResults.filename = directories[i].getName();
-            
+
+            System.out.println("Processing DB Video: " + videoDirectory);
             // Process objects
             dbVideoResults.objectResults = processGoogleCloudObjects(databaseVideoFilepath);
             // Process color
-            dbVideoResults.colorResults = processOpenCVColor(databaseVideoFilepath, false);
+            dbVideoResults.colorResults = processColor(databaseVideoFilepath, false);
             // Process motion
             dbVideoResults.motionResults = processOpenCVMotion(databaseVideoFilepath);
-            
+
             // Write out VideoAnalysisResults
             writeDatabaseMetadataFile(dbVideoResults, videoDirectory);
-            
+
             // Report success or failure
             System.out.println("Finished writing " + dbVideoResults.filename + ".meta");
         }
-        System.out.println("Finished processing all videos in the database.");
     }
 }

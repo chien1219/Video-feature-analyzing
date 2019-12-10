@@ -16,7 +16,7 @@
       <TextField fx:id="txtQueryVideo" layoutX="198.0" layoutY="34.0" prefHeight="27.0" prefWidth="239.0" />
       <Label fx:id="lblSelectQueryVideo" layoutX="24.0" layoutY="39.0" text="Select Query Video:" />
       <Label fx:id="lblSelectDescriptors" layoutX="25.0" layoutY="90.0" text="Select Video Descriptors:" />
-      <Button fx:id="btnSearch" layoutX="24.0" layoutY="242.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Search" />
+      <Button fx:id="btnSearch" layoutX="24.0" layoutY="210.0" mnemonicParsing="false" onAction="#handleSearchAction" text="Search"/>
       <Label fx:id="lblResults" layoutX="526.0" layoutY="25.0" text="Results:" />
       <Label fx:id="lblVisualMatch" layoutX="526.0" layoutY="129.0" text="Visual Match" />
       <Label fx:id="lblResultVideoPreview" layoutX="529.0" layoutY="297.0" text="Video Preview:" />
@@ -24,7 +24,8 @@
       <MediaView fx:id="mvDatabaseVideo" fitHeight="288.0" fitWidth="352.0" layoutX="529.0" layoutY="326.0" />
       <MediaView fx:id="mvQueryVideo" fitHeight="288.0" fitWidth="352.0" layoutX="24.0" layoutY="326.0" />
       <ListView fx:id="lstviewResultsList" layoutX="526.0" layoutY="49.0" prefHeight="75.0" prefWidth="352.0" />
-      <Label fx:id="lblQueryStatus" layoutX="103.0" layoutY="247.0" text="Query Status:" />
+      <Label fx:id="lblQueryStatus" layoutX="103.0" layoutY="215.0" text="Query Status:" />
+      <Label fx:id="lblFrameSimilarity" layoutX="24.0" layoutY="260.0" text=""/>
       <Button fx:id="btnVideoPlay" layoutX="573.0" layoutY="655.0" mnemonicParsing="false" onAction="#playDatabaseVideo" prefHeight="27.0" prefWidth="75.0" text="Play" />
       <Button fx:id="btnVideoPause" layoutX="664.0" layoutY="655.0" mnemonicParsing="false" onAction="#pauseDatabaseVideo" prefWidth="75.0" text="Pause" />
       <Button fx:id="btnVideoStop" layoutX="757.0" layoutY="655.0" mnemonicParsing="false" onAction="#stopDatabaseVideo" prefWidth="75.0" text="Stop" />

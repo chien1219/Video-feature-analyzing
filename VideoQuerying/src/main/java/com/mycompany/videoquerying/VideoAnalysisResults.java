@@ -10,14 +10,14 @@ public class VideoAnalysisResults implements Serializable
 {
     public String filename;
     public GCloudResults objectResults;
-    public OpenCVColorResults colorResults;
+    public ColorResults colorResults;
     public OpenCVMotionResults motionResults;
     
     public VideoAnalysisResults()
     {
         filename = "";
         objectResults = new GCloudResults();
-        colorResults = new OpenCVColorResults();
+        colorResults = new ColorResults();
         motionResults = new OpenCVMotionResults();
     }
 }

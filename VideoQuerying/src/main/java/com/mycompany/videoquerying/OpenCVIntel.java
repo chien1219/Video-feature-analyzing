@@ -29,6 +29,7 @@ public class OpenCVIntel {
     Input: string directory
     output: Mat
      */
+
     public static OpenCVColorResults ClusterVideoCV(String directory)
     {
         /*
@@ -103,6 +104,7 @@ public class OpenCVIntel {
 //        System.out.println(returnedColors.dump());
 //        return returnedColors;
     }
+
 
     /*
      * for each frame, populate the framedata with ColorData; It then adds the framesdata into the OpenCVColorResult

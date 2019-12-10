@@ -1,15 +1,11 @@
 package com.mycompany.videoquerying;
 
 import static com.mycompany.videoquerying.OpenCVIntel.*;
-import static com.mycompany.videoquerying.QueryProcessor.findDatabaseMatch;
-import static com.mycompany.videoquerying.QueryProcessor.processGoogleCloudObjects;
-import static com.mycompany.videoquerying.QueryProcessor.processOpenCVColor;
-import static com.mycompany.videoquerying.QueryProcessor.processOpenCVMotion;
-import static com.mycompany.videoquerying.QueryProcessor.processAllDatabaseVideos;
 
 import static com.mycompany.videoquerying.GcloudVideoIntel.analyzeLabels;
 import static com.mycompany.videoquerying.GcloudVideoIntel.analyzeLabelsFromCloud;
 import static com.mycompany.videoquerying.GcloudVideoIntel.uploadFiles;
+import static com.mycompany.videoquerying.QueryProcessor.*;
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -42,19 +38,22 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
+import javafx.scene.paint.Color;
 import javafx.util.Duration;
 
 public class FXMLController implements Initializable {
     
     /* Video Querying Variables */
     private VideoEncoder encoder;
+
+    private VideoAnalysisResults queryResults;
     
     private Duration databaseVideoDuration;
     private Duration queryVideoDuration;
     
     private final int FRAME_RATE = 30;
     
-    private final String DATABASE_DIR = "./database_videos/";
+    public static final String DATABASE_DIR = "./database_videos/";
     
     private HashMap<String, MediaPlayer> loadedVideos;
     
@@ -64,7 +63,7 @@ public class FXMLController implements Initializable {
     
     private ArrayList<MatchResult> currentMatches = new ArrayList();
     private String currentDatabaseVideoName = "";
-    
+
     /* FXML Variables */
     @FXML
     private MediaView mvDatabaseVideo;
@@ -76,6 +75,8 @@ public class FXMLController implements Initializable {
     private ListView lstviewResultsList;
     @FXML
     private Label lblQueryStatus;
+    @FXML
+    private Label lblFrameSimilarity;
     @FXML
     private ToggleGroup descriptorGroup;
     @FXML
@@ -107,10 +108,9 @@ public class FXMLController implements Initializable {
         
         // Initialize OpenCV
         CVInit();
-              
+
         // OPTIONAL: Re-process all database video meta files
-//        processAllDatabaseVideos(DATABASE_DIR);
-        
+        processAllDatabaseVideos(DATABASE_DIR);
     } 
     
     @FXML
@@ -137,14 +137,18 @@ public class FXMLController implements Initializable {
         /**********************************************************************/
         /*       Write query video frames to pngs and then encode to mp4
         /**********************************************************************/
-        System.out.println("Query Status: Processing query video...");
-        encoder.encodeMp4(queryDirectory);
+        String queryVideoFilepath = queryFileDirectory.getAbsolutePath() + "/" + queryFileDirectory.getName() + ".mp4";
+        File queryVideo = new File(queryVideoFilepath);
+        if (!queryVideo.exists())
+        {
+            System.out.println("Query Status: Encoding query video...");
+            encoder.encodeMp4(queryDirectory);
+        }
         
         /**********************************************************************/        
         /*                  Load the query video into the GUI
         /**********************************************************************/
-        String queryVideoFilepath = queryFileDirectory.getAbsolutePath() + "/" + queryFileDirectory.getName() + ".mp4";
-        System.out.println(queryVideoFilepath);
+
         loadQueryVideo(queryVideoFilepath);
 
         /**********************************************************************/
@@ -153,15 +157,18 @@ public class FXMLController implements Initializable {
         System.out.println("Query Status: Processing video descriptors...");
         
         // Create the container for the query results
-        VideoAnalysisResults queryResults = new VideoAnalysisResults();
+        queryResults = new VideoAnalysisResults();
         queryResults.filename = queryFileDirectory.getName();
-        
+
         // Google Cloud object detection
-        queryResults.objectResults = processGoogleCloudObjects(queryVideoFilepath);            
+        if (useObjectDescriptor)
+            queryResults.objectResults = processGoogleCloudObjects(queryVideoFilepath);
         // Opencv color
-        queryResults.colorResults = processOpenCVColor(queryVideoFilepath, true);
+        if (useColorDescriptor)
+            queryResults.colorResults = processColor(queryFileDirectory.getName(), true);
         // Opencv motion
-        queryResults.motionResults = processOpenCVMotion(queryVideoFilepath);
+        if (useMotionDescriptor)
+            queryResults.motionResults = processOpenCVMotion(queryVideoFilepath);
         
         // Print out the filename, color, and motion results (the object results are already printed during processing)
         printAdditionalVideoAnalysisResultsData(queryResults);
@@ -173,7 +180,7 @@ public class FXMLController implements Initializable {
         ArrayList<MatchResult> matches = findDatabaseMatch(queryResults, DATABASE_DIR, useObjectDescriptor, useColorDescriptor, useMotionDescriptor);
         currentMatches = matches;
         updateListView(currentMatches);
-        
+
         /**********************************************************************/
         /*  Display select the top view in the list view and the line graph
         /**********************************************************************/
@@ -181,8 +188,8 @@ public class FXMLController implements Initializable {
         {
             // Select the first video as a default to show after the results are found
             lstviewResultsList.getSelectionModel().select(0);
-        } 
-        
+        }
+
         lblQueryStatus.setText("Finished processing query.");
         System.out.println("Finished processing query.");
     }
@@ -498,6 +505,11 @@ public class FXMLController implements Initializable {
 
                     // Mark the new video name as the current video name
                     currentDatabaseVideoName = newVideoString;
+
+                    // Update Frame Similarity Label
+                    Integer frm = queryResults.colorResults.frameMap.get(newVideoString);
+                    lblFrameSimilarity.setTextFill(Color.web("#ff0000"));
+                    lblFrameSimilarity.setText("The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".");
                 }
             }
         });
@@ -537,6 +549,7 @@ public class FXMLController implements Initializable {
     public void printAdditionalVideoAnalysisResultsData(VideoAnalysisResults results)
     {
         System.out.println("VideoAnalysisResults for " + results.filename);
+        /*
         System.out.println("***** Color Results *****");
         for (int i = 0; i < results.colorResults.frames.size(); i++)
         {
@@ -547,7 +560,8 @@ public class FXMLController implements Initializable {
             }
         }
         System.out.println("***************");
-       
+       */
+
         System.out.println("***** Motion Results *****");
         System.out.println("Average motion: " + results.motionResults.averageMotion);
         System.out.println("Total motion: " + results.motionResults.totalMotion);
