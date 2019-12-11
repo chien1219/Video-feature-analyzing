@@ -135,17 +135,11 @@ public class QueryProcessor {
                 System.out.println("Processing color results...");
 
                 overallColorScore = queryResults.colorResults.resultMap.get(directories[i].getName());
-                // Get the GCloud object results for the current database video
-                /*
-                ColorResults databaseColorResults = databaseVideoMeta.get(i).colorResults;
 
-                for (int frame = 0; frame < databaseColorResults.frames.size(); frame++)
+                for (int frame = 0; frame < 600; frame++)
                 {
-                    colorFrameScore[frame] = 1 - scoreColor(queryResults.colorResults.frames.get(0), databaseColorResults.frames.get(frame));
-                    overallColorScore += colorFrameScore[frame];
+                    colorFrameScore[frame] = queryResults.colorResults.resultScoreMap.get(directories[i].getName())[frame];
                 }
-                overallColorScore /= (double) databaseColorResults.frames.size();
-                 */
             }
             
             /**********************************************************************/        
@@ -241,6 +235,7 @@ public class QueryProcessor {
         {
             colorResults.resultMap = searchClass.search(filename);
             colorResults.frameMap = searchClass.frameMap;
+            colorResults.resultScoreMap = searchClass.resultsScoreMap;
         }
         else
         {
@@ -320,12 +315,12 @@ public class QueryProcessor {
          
         catch(IOException ex)
         {
-//            System.out.println("IOException is caught. Unable to read metadata.");
+            System.out.println("IOException is caught. Unable to read metadata." + ex.getLocalizedMessage());
         }
          
         catch(ClassNotFoundException ex)
         {
-//            System.out.println("ClassNotFoundException is caught. Unable to read metadata.");
+            System.out.println("ClassNotFoundException is caught. Unable to read metadata.");
         }
         
         return metadata;

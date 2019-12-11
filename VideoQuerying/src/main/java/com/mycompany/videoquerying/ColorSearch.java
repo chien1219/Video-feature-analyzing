@@ -8,6 +8,7 @@ public class ColorSearch {
     public VideoStruc[] vs;
     public Map<String, Integer> frameMap;
     private int database_videos;
+    public Map<String, double[]> resultsScoreMap;
 
     public void init() throws IOException{
 
@@ -15,6 +16,7 @@ public class ColorSearch {
         database_videos = directories.length;
 
         frameMap = new HashMap<String, Integer>();
+        resultsScoreMap = new HashMap<String, double[]>();
 
         vs = new VideoStruc[database_videos];
 
@@ -62,9 +64,15 @@ public class ColorSearch {
             //array for recording the start frame of the similar clips
             int[] resembleClips = new int[250];
             double[] resembleValues = new double[250];
+            double[] imgBytesScores = new double[600];
             for(int j = 0;j < 250;j++) {
                 resembleClips[j] = -1;
                 resembleValues[j] = 0.0;
+            }
+
+            for (int x = 0; x < 600; x++) {
+                double frameHashCompareScore = hashCompare(queryV.imgbytes[0], vs[i].imgbytes[x]);
+                imgBytesScores[x] = frameHashCompareScore;
             }
 
             //get the start frames of the most similar clips
@@ -112,13 +120,16 @@ public class ColorSearch {
             double simisum = 0.0;
             k = 0;
             for(int j = clip;j < clip + 150 && k < queryV.framenum;j++, k++) {
-                simisum += hashCompare(queryV.imgbytes[k], vs[i].imgbytes[j]);
+                double frameHashCompareScore2 = hashCompare(queryV.imgbytes[k], vs[i].imgbytes[j]);
+                imgBytesScores[j] = frameHashCompareScore2;
+                simisum += frameHashCompareScore2;
             }
             //System.out.println(simisum);
 
 
             simiMap.put(vs[i].videoname, simisum / 150.0);
             //System.out.println("For video" + i + ": " + simisum / 150.0);
+            resultsScoreMap.put(vs[i].videoname, imgBytesScores);
 
         }
 
@@ -128,9 +139,15 @@ public class ColorSearch {
         for(int i = 0;i < 7;i++) {
             int[] resembleClips = new int[250];
             double[] resembleValues = new double[250];
+            double[] colorDistScores = new double[600];
             for(int j = 0;j < 250;j++) {
                 resembleClips[j] = -1;
                 resembleValues[j] = 0.0;
+            }
+
+            for (int x = 0; x < 600; x++) {
+                double frameDistCompareScore = 1 - distCompare(queryV.rgbCount[0], vs[i].rgbCount[x]);
+                colorDistScores[x] = frameDistCompareScore;
             }
 
             //get the start frames of the most similar clips
@@ -176,12 +193,19 @@ public class ColorSearch {
             double simisum = 0.0;
             k = 0;
             for(int j = clip;j < clip + 150 && k < queryV.framenum;j++, k++) {
-                simisum += distCompare(queryV.rgbCount[k], vs[i].rgbCount[j]);
+                double frameDistCompareScore2 = distCompare(queryV.rgbCount[k], vs[i].rgbCount[j]);
+                colorDistScores[j] = frameDistCompareScore2;
+                simisum += frameDistCompareScore2;
             }
 
             simiMap.put(vs[i].videoname, simiMap.get(vs[i].videoname) * 0.8 + (1 - simisum / 150.0) * 0.2);
             //System.out.println(simiMap.get(vs[i].videoname));
 
+            double[] tmpImgBytesScores = resultsScoreMap.get(vs[i].videoname);
+            for (int x = 0; x < 600; x++) {
+                tmpImgBytesScores[x] = 0.8 * tmpImgBytesScores[x] + 0.2 * colorDistScores[x];
+            }
+            resultsScoreMap.put(vs[i].videoname, tmpImgBytesScores);
         }
         System.out.println("Color Comparison Complete!");
         System.out.println("Audio Comparison Complete!");
