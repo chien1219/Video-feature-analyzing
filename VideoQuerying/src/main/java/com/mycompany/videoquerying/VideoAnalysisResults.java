@@ -1,5 +1,6 @@
 package com.mycompany.videoquerying;
 
+import java.awt.*;
 import java.io.Serializable;
 
 /**
@@ -10,14 +11,16 @@ public class VideoAnalysisResults implements Serializable
 {
     public String filename;
     public GCloudResults objectResults;
-    public ColorResults colorResults;
     public OpenCVMotionResults motionResults;
-    
+    public OpenCVColorResults OpenCVColorResults;
+    public ColorResults colorResults;
+
     public VideoAnalysisResults()
     {
         filename = "";
         objectResults = new GCloudResults();
-        colorResults = new ColorResults();
+        OpenCVColorResults = new OpenCVColorResults();
         motionResults = new OpenCVMotionResults();
+        colorResults = new ColorResults();
     }
 }
