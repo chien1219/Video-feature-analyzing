@@ -58,6 +58,6 @@
     <orderEntry type="library" name="Maven: io.opencensus:opencensus-api:0.11.1" level="project" />
     <orderEntry type="library" name="Maven: io.opencensus:opencensus-contrib-http-util:0.11.1" level="project" />
     <orderEntry type="library" name="Maven: com.google.apis:google-api-services-storage:v1-rev114-1.23.0" level="project" />
-    <orderEntry type="library" name="Maven: org.openpnp:opencv:3.2.0-0" level="project" />
+    <orderEntry type="library" name="Maven: org.openpnp:opencv:3.4.2-1" level="project" />
   </component>
 </module>

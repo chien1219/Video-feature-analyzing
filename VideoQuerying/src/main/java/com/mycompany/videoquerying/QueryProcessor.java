@@ -398,7 +398,7 @@ public class QueryProcessor {
             System.out.println("Encoding DB Video: " + videoDirectory);
 
             // Encode the video (to get .png's and .mp4)
-            encodeMp4(videoDirectory);
+            //encodeMp4(videoDirectory);
 
             // Get the newly created .mp4 video filepath
             String databaseVideoFilepath = directories[i].getAbsolutePath() + "/" + directories[i].getName() + ".mp4";
