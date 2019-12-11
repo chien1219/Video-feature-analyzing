@@ -376,7 +376,7 @@ public class QueryProcessor {
         File[] directories = new File(databaseDirectory).listFiles(File::isDirectory);
 
         InitSearchClass();
-        ProcessDBVideos(directories);
+        //ProcessDBVideos(directories);
 
         System.out.println("Finished processing all videos in the database.");
     }
