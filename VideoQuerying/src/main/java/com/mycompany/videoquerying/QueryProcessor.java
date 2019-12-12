@@ -174,6 +174,9 @@ public class QueryProcessor {
             /*        CREATE MATCH RESULT FOR THIS QUERY/DATABASE VIDEO PAIR
             /**********************************************************************/
             // Combine all the scores and weight them evenly based on how many descriptors were used
+            System.out.println("Score Color - " + overallColorScore);
+            System.out.println(" Score Object - " + overallObjectScore);
+            System.out.println(" Motion Object - " + overallMotionScore);
             double finalScore = overallObjectScore + overallColorScore + overallMotionScore;
             if (numDescriptorsUsed > 0)
             {

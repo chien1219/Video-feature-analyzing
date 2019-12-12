@@ -491,11 +491,18 @@ public class FXMLController implements Initializable {
                     // Mark the new video name as the current video name
                     currentDatabaseVideoName = newVideoString;
 
-                    // Update Frame Similarity Label
-                    Integer frm = queryResults.colorResults.frameMap.get(newVideoString);
-                    lblFrameSimilarity.setTextFill(Color.web("#ff0000"));
-                    lblFrameSimilarity.setText("The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".");
-                }
+                    if (useColorDescriptor)
+                    {
+                        // Update Frame Similarity Label
+                        Integer frm = queryResults.colorResults.frameMap.get(newVideoString);
+                        lblFrameSimilarity.setTextFill(Color.web("#ff0000"));
+                        lblFrameSimilarity.setText("The most similar clip is from frame " + (frm+1) + " to frame " + (frm+151) + ".");
+                    }
+                    else
+                    {
+                        lblFrameSimilarity.setText("");
+                    }
+                   }
             }
         });
     }
