@@ -146,29 +146,53 @@ public class QueryProcessor {
             /*                          MOTION DESCRIPTOR
             /**********************************************************************/
             double overallMotionScore = 0;
-            double[] motionFrameScore = new double[600];
-            
-            if (useMotionDescriptor && queryResults.motionResults != null)
-            {
-                System.out.println("Processing motion results...");
-                
-                // Get the GCloud object results for the current database video
-                OpenCVMotionResults databaseMotionResults = databaseVideoMeta.get(i).motionResults;
-                
-                // Calculate the area of the frame
-                double frameArea = 1056 * 864;
-                        
-                // for each frame in the current database, find a score based on the average motion in the query video clip
-                for (int frame = 0; frame < databaseMotionResults.frameMotion.size(); frame++)
-                {
-                    double absDiff = Math.abs(queryResults.motionResults.averageMotion - databaseMotionResults.frameMotion.get(frame));
-                    motionFrameScore[frame] = (1 - (absDiff / frameArea));
-                }
-                
-                // Calculate the overall video motion match score
-                double absDiff = Math.abs(queryResults.motionResults.averageMotion - databaseMotionResults.averageMotion);
-                overallMotionScore = (1 - (absDiff / frameArea));
-            }
+			double[] motionFrameScore = new double[600];
+
+			if (useMotionDescriptor && queryResults.motionResults != null)
+			{
+				System.out.println("Processing motion results...");
+
+				// Get the GCloud object results for the current database video
+				OpenCVMotionResults databaseMotionResults = databaseVideoMeta.get(i).motionResults;
+
+				// Calculate the area of the frame
+				double frameArea = 1056 * 864;
+
+				// for each frame in the current database, find a score based on the average motion in the query video clip
+				for (int frame = 0; frame < databaseMotionResults.frameMotion.size(); frame++)
+				{
+					double absDiff = Math.abs(queryResults.motionResults.averageMotion - databaseMotionResults.frameMotion.get(frame));
+					motionFrameScore[frame] = (1 - (absDiff / frameArea));
+				}
+
+				// Calculate the overall video motion match score
+				// Since the query video is shorter, apply a sliding window on database videos to compare motion
+				int queryResultsFrameCount = queryResults.motionResults.frameMotion.size();
+				double totalMotion = 0;
+				double minDiff = Double.MAX_VALUE;
+
+				// For each frame in the current database, calculate the average motion of the last (150) frames
+				for (int frame = 0; frame < databaseMotionResults.frameMotion.size(); frame++)
+				{
+					totalMotion +=  databaseMotionResults.frameMotion.get(frame);
+
+					// Are we far into the video enough to calculate the window average?
+					if (frame >= queryResultsFrameCount)
+					{
+						double averageMotion = totalMotion / queryResultsFrameCount;
+						double diff = Math.abs(queryResults.motionResults.averageMotion - averageMotion);
+
+						if (diff < minDiff)
+						{
+							minDiff = diff;
+						}
+
+						totalMotion -= databaseMotionResults.frameMotion.get(frame - queryResultsFrameCount);
+					}
+				}
+
+				overallMotionScore = (1 - (minDiff / frameArea));
+			}
             
             /**********************************************************************/        
             /*        CREATE MATCH RESULT FOR THIS QUERY/DATABASE VIDEO PAIR

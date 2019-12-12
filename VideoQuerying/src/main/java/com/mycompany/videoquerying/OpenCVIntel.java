@@ -189,46 +189,48 @@ public class OpenCVIntel {
         camera.set(4, 864);
 
         camera.read(frame);
-        
-        //convert to grayscale and set the first frame
-        Imgproc.cvtColor(frame, firstFrame, Imgproc.COLOR_BGR2GRAY);
-        Imgproc.GaussianBlur(firstFrame, firstFrame, new Size(21, 21), 0);
+
+        int kernelSize = 9;
 
         OpenCVMotionResults finalResults = new OpenCVMotionResults();
-        
-        while(camera.read(frame)) {
+
+        //convert to grayscale and set the first frame
+        Imgproc.cvtColor(frame, firstFrame, Imgproc.COLOR_BGR2GRAY);
+        Imgproc.GaussianBlur(firstFrame, firstFrame, new Size(kernelSize, kernelSize), 0);
+
+        while(camera.read(frame))
+        {
             //convert to grayscale
             Imgproc.cvtColor(frame, gray, Imgproc.COLOR_BGR2GRAY);
-            Imgproc.GaussianBlur(gray, gray, new Size(21, 21), 0);
+            Imgproc.GaussianBlur(gray, gray, new Size(kernelSize, kernelSize), 0);
 
-            //compute difference between first frame and current frame
+            //compute difference between previous frame and current frame
             Core.absdiff(firstFrame, gray, frameDelta);
             Imgproc.threshold(frameDelta, thresh, 25, 255, Imgproc.THRESH_BINARY);
 
-             // Write the difference (delta) frames out to a folder
-//            Imgcodecs.imwrite("/Users/ivanchen/Desktop/delta/delta" + j++ + ".jpg", frameDelta);
-
+            // Dilate the difference to fill in the gaps
             Imgproc.dilate(thresh, thresh, new Mat(), new Point(-1, -1), 2);
-            
-            List<MatOfPoint> cnts = new ArrayList<MatOfPoint>();
-            Imgproc.findContours(thresh, cnts, new Mat(), Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
-            // This resets the frame each time
-            Imgproc.cvtColor(frame, firstFrame, Imgproc.COLOR_BGR2GRAY);
-            Imgproc.GaussianBlur(firstFrame, firstFrame, new Size(21, 21), 0);
+            // Find contours
+            List<MatOfPoint> contours = new ArrayList<MatOfPoint>();
+            Imgproc.findContours(thresh, contours, new Mat(), Imgproc.RETR_EXTERNAL, Imgproc.CHAIN_APPROX_SIMPLE);
 
-            // Calculate the total current motion in the current frame
+            // Sum the areas with motion in this frame
             double currentFrameMotionAmount = 0;
-            for (int i = 0; i < cnts.size(); i++)
+            for (int i = 0; i < contours.size(); i++)
             {
-                currentFrameMotionAmount += Imgproc.contourArea(cnts.get(i));
+                currentFrameMotionAmount += Imgproc.contourArea(contours.get(i));
             }
-            
+
             // Add this amount to the finalResults
             finalResults.frameMotion.add(currentFrameMotionAmount);
             finalResults.totalMotion += currentFrameMotionAmount;
+
+            // first frame = current frame
+            Imgproc.cvtColor(frame, firstFrame, Imgproc.COLOR_BGR2GRAY);
+            Imgproc.GaussianBlur(firstFrame, firstFrame, new Size(kernelSize, kernelSize), 0);
         }
-        
+
         finalResults.averageMotion = finalResults.totalMotion / (double) finalResults.frameMotion.size();
 
         // Uncomment the following to print out the motion results
