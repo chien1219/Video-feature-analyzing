@@ -1,5 +1,10 @@
-### 2019 Fall  
-### CSCI-576 Multimedia System Design Final Project  
+  ### Component
+  Color Content
+  Motion Vector
+  Sound PCM Analyze
+  OpenCV
+  Google Cloud Video AI
+  
   
   ### Running code  
   Put query videos into folder with name "query"  
