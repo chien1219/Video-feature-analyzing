@@ -1,9 +1,9 @@
   ### Component
-  Color Content
-  Motion Vector
-  Sound PCM Analyze
-  OpenCV
-  Google Cloud Video AI
+  Color Content  
+  Motion Vector  
+  Sound PCM Analyze  
+  OpenCV  
+  Google Cloud Video AI  
   
   
   ### Running code  
@@ -11,6 +11,6 @@
   Put database videos into folder with name "db"  
   
   
-Author:  
+#### Author:  
 Shawn Lin  
 Richard Chien
